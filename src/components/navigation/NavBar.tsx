@@ -8,31 +8,48 @@ const logo = '/assets/logoW.png'
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
 
-  const menuItemsArray = [
+  const helpLinks = [
     {
-      label: 'Home',
-      link: '/',
-    },
-    {
-      label: 'Shop',
-      link: '/shop',
-    },
-    {
-      label: 'Events',
-      link: '/turtletreks',
-    },
-    {
-      label: 'How to help',
+      label: 'Donations',
       link: '/donations',
     },
     {
-      label: 'Whats new',
+      label: 'Membership',
+      link: '/membership',
+    },
+    {
+      label: 'Name a hatchling',
+      link: '/hatchling',
+    },
+    {
+      label: 'Volunteer',
+      link: '/volunteer',
+    },
+  ]
+  const eventsLinks = [
+    {
+      label: 'Turtle Treks',
+      link: '/turtletreks',
+    },
+    {
+      label: 'Tablings',
+      link: '/tablings',
+    },
+  ]
+
+  const newsLinks = [
+    {
+      label: 'News',
       link: '/news',
+    },
+    {
+      label: 'Gallery',
+      link: '/gallery',
     },
   ]
 
   const renderSingleMenuLink = (index: number, link: string, children: string) => (
-    <li key={`${children}-${index}`} className='NavBar-active'>
+    <li className='NavBar-active'>
       <a className='NavBar-link' href={link}>
         <span aria-hidden='true'>0{index}</span>
         {children}
@@ -40,15 +57,19 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
     </li>
   )
 
-  const renderSubMenuLink = (index: number, link: string, children: string, submenu?: boolean) => {
-    const [visible, setVisible] = useState(false)
+  const renderAccordionBullet = (indicator: number, label: string, content: any) => {
+    const renderBullet = content?.map((item: menuItemsArrayPropsTypes, index: number) => (
+      <a className='accordion-link' href={item.link}>
+        {item.label}
+      </a>
+    ))
     return (
-      <li key={`${children}-${index}`} className='NavBar-active'>
-        <a className='NavBar-link' onClick={() => setVisible(!visible)}>
-          <span aria-hidden='true'>0{index}</span>
-          {children}
+      <li className='accordion'>
+        <a className='accordion-button uppercase ff-sans-cond'>
+          <span aria-hidden='true'>0{indicator}</span>
+          {label}
         </a>
-        {visible && <ul className='NavBar-submenu'></ul>}
+        <ul className='accordion-content'>{renderBullet}</ul>
       </li>
     )
   }
@@ -58,7 +79,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
       <div>{logo && <img src={logo} className='primary-logo' />}</div>
       <ToggleButton
         top={1}
-        right={1}
+        right={4}
         customClass='mobile-nav-toggle'
         ariaControls='primary-navigation'
         ariaExpanded={visible}
@@ -68,13 +89,13 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         }}
         buttonBackgroundColor='transparent'
       />
-      <nav>
+      <nav className="navbar">
         <ul id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
-          {renderSingleMenuLink(0, menuItemsArray[0].link, menuItemsArray[0].label)}
-          {renderSingleMenuLink(1, menuItemsArray[1].link, menuItemsArray[1].label)}
-          {renderSingleMenuLink(2, menuItemsArray[2].link, menuItemsArray[2].label)}
-          {renderSingleMenuLink(3, menuItemsArray[3].link, menuItemsArray[3].label)}
-          {renderSingleMenuLink(4, menuItemsArray[4].link, menuItemsArray[4].label)}
+          {renderSingleMenuLink(0, '/', 'Home')}
+          {renderSingleMenuLink(1, '/shop', 'shop')}
+          {renderAccordionBullet(2, 'Events', eventsLinks)}
+          {renderAccordionBullet(3, 'How to help', helpLinks)}
+          {renderAccordionBullet(4, 'Whats new', newsLinks)}
         </ul>
       </nav>
     </section>
