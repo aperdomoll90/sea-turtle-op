@@ -24,7 +24,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+.flex {
+  display: flex;
+}
 
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .flex-row {
   display: flex;
   gap: var(--gap, 1rem);

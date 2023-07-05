@@ -3,7 +3,7 @@
   width: 100vw;
   align-items: center;
   position: fixed;
-  z-index: 100000;
+  z-index: 9999;
   inset: 2rem 0;
   justify-content: space-between;
 }
