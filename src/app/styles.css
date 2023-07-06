@@ -1,61 +1,62 @@
 /* --primary-color:#060117 */
 
 #home-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: rgb(237, 236, 241); */
-    background: rgb(6, 1, 23);
-  }
-  
-  #home-canvas-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: floating 5s infinite ease-in-out alternate;
-  }
-  @keyframes floating {
-    0% {
-      transform: translateY(2%);
-    }
-    50% {
-      transform: translateY(-2%);
-    }
-  }
-  #home-canvas-logo-ring {
-    height: 75vh;
-    min-width: 75vh;
-    aspect-ratio: 1;
-    position: absolute;
-    opacity: 0.5;
-  }
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgb(237, 236, 241); */
+  background: rgb(6, 1, 23);
+}
 
-  
-  .home-content-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 400vh;
-    z-index: 99999;
+#home-canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floating 5s infinite ease-in-out alternate;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(2%);
   }
-  
-  .fixed-test {
-    width: 100vw;
-    height: 100vh;
-    outline:2px solid var(--color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  50% {
+    transform: translateY(-2%);
   }
-  
+}
+#home-canvas-logo-ring {
+  height: 75vh;
+  min-width: 75vh;
+  aspect-ratio: 1;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.home-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 500vh;
+  z-index: 100;
+}
+
+.fixed-test {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  outline: 2px solid var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
