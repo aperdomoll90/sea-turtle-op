@@ -46,7 +46,7 @@
   left: 0;
   width: 100vw;
   height: 500vh;
-  z-index: 99999;
+  z-index: 100;
 }
 
 .fixed-test {
@@ -58,3 +58,5 @@
   justify-content: center;
   align-items: center;
 }
+
+

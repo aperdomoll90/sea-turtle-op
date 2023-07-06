@@ -24,11 +24,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.flex {
-  display: flex;
-}
 
-.center{
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
