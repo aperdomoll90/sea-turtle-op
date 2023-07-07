@@ -1,7 +1,7 @@
 'use client'
 import './styles.css'
 import { useState } from 'react'
-import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.type'
+import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
 import { ToggleButton } from '../ToggleButton'
 const logo = '/assets/logoW.png'
 

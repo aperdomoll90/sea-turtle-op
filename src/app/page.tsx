@@ -42,9 +42,7 @@ export default function Home() {
         <div className='fixed-test' style={{ '--color': 'rgba(207, 23, 23, 0.246)' } as React.CSSProperties} />
         <div className='fixed-test' style={{ '--color': 'rgba(48, 207, 23, 0.271)' } as React.CSSProperties} />
         <div className='fixed-test' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties} />
-        <div className='fixed-test last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}>
-          <Footer />
-        </div>
+        <div className='fixed-test last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
       </div>
     </div>
   )
