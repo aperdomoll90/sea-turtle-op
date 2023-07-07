@@ -76,7 +76,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   return (
     <section id='primary-header' className='primary-header flex-row'>
-      <div>{logo && <img src={logo} className='primary-logo' />}</div>
+      <a href='/'>{logo && <img src={logo} className='primary-logo' />}</a>
       <ToggleButton
         top={1}
         right={4}
