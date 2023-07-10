@@ -1,9 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Abel } from 'next/font/google'
 import { Footer } from '@/layout/footer/Footer'
 import { NavBar } from '@/components/navigation/NavBar'
 
-const inter = Inter({ subsets: ['latin'] })
+const abel = Abel({ subsets: ['latin'], weight: '400' })
 
 export const metadata = {
   title: 'Sea Turtle Oversight Protection',
@@ -13,9 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-      <NavBar />
-      <div className='layout-page-container'>{children}</div>
+      <body className={abel.className}>
+        <NavBar />
+        <div className='layout-page-container'>{children}</div>
+        <Footer /> 
       </body>
     </html>
   )
