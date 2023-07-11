@@ -2,7 +2,7 @@
 import './styles.css'
 import { useState } from 'react'
 import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.type'
-import { ToggleButton } from '../ToggleButton'
+import { ToggleButton } from './ToggleButton'
 const logo = '/assets/logoW.png'
 
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
@@ -56,6 +56,14 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
     },
   ]
 
+  const contactLinks = [
+    {
+      id: 1,
+      label: 'News',
+      link: '/news',
+    },
+  ]
+
   const renderSingleMenuLink = (index: number, link: string, children: string) => (
     <li className='NavBar-active'>
       <a className='NavBar-link' href={link}>
@@ -105,9 +113,9 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
           className='primary-navigation uppercase ff-sans-cond flex-row'>
           {renderSingleMenuLink(0, '/', 'Home')}
           {renderSingleMenuLink(1, '/shop', 'shop')}
-          {renderAccordionBullet(2, 'Events', eventsLinks)}
-          {renderAccordionBullet(3, 'How to help', helpLinks)}
+          {renderAccordionBullet(2, 'Events', eventsLinks)}          {renderAccordionBullet(3, 'How to help', helpLinks)}
           {renderAccordionBullet(4, 'Whats new', newsLinks)}
+          {renderSingleMenuLink(5, '/contact', 'Contact')}
         </ul>
       </nav>
     </section>
