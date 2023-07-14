@@ -2,7 +2,7 @@ footer {
   width: 100vw;
   height: 4rem;
   background: #060117;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 100;
   display: flex;

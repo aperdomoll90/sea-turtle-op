@@ -1,7 +1,7 @@
 'use client'
 import './styles.css'
 import { useState } from 'react'
-import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.type'
+import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
 import { ToggleButton } from '../ToggleButton'
 const logo = '/assets/logoW.png'
 
@@ -84,7 +84,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   return (
     <section id='primary-header' className='primary-header flex-row'>
-      <div>{logo && <img src={logo} className='primary-logo' />}</div>
+      <a href='/'>{logo && <img src={logo} className='primary-logo' />}</a>
       <ToggleButton
         top={1}
         right={4}

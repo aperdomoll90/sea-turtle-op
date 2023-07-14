@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-import { ModelProps } from './Model.type'
+import { ModelProps } from './Model.types'
 
 export const Model: React.FC<ModelProps> = ({ tittle, content, setVisible }) => {
   return (
