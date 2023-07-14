@@ -10,28 +10,34 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   const helpLinks = [
     {
+      id: 1,
       label: 'Donations',
       link: '/donations',
     },
     {
+      id: 2,
       label: 'Membership',
       link: '/membership',
     },
     {
+      id: 3,
       label: 'Name a hatchling',
       link: '/hatchling',
     },
     {
+      id: 4,
       label: 'Volunteer',
       link: '/volunteer',
     },
   ]
   const eventsLinks = [
     {
+      id: 1,
       label: 'Turtle Treks',
       link: '/turtletreks',
     },
     {
+      id: 2,
       label: 'Tablings',
       link: '/tablings',
     },
@@ -39,10 +45,12 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   const newsLinks = [
     {
+      id: 1,
       label: 'News',
       link: '/news',
     },
     {
+      id: 2,
       label: 'Gallery',
       link: '/gallery',
     },
@@ -59,7 +67,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   const renderAccordionBullet = (indicator: number, label: string, content: any) => {
     const renderBullet = content?.map((item: menuItemsArrayPropsTypes, index: number) => (
-      <a className='accordion-link' href={item.link}>
+      <a key={item.id} className='accordion-link' href={item.link}>
         {item.label}
       </a>
     ))
@@ -89,8 +97,12 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         }}
         buttonBackgroundColor='transparent'
       />
-      <nav className="navbar">
-        <ul id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
+      <nav className='navbar'>
+        <ul
+          id='primary-navigation'
+          aria-expanded={visible}
+          data-visible={visible}
+          className='primary-navigation uppercase ff-sans-cond flex-row'>
           {renderSingleMenuLink(0, '/', 'Home')}
           {renderSingleMenuLink(1, '/shop', 'shop')}
           {renderAccordionBullet(2, 'Events', eventsLinks)}
