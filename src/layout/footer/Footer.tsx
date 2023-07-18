@@ -84,14 +84,14 @@ const disclosure = (
 )
 export const Footer = () => {
   const [visible, setVisible] = React.useState(false)
-  const [modelContent, setModelContent] = React.useState({ tittle: '', content: <></> })
+  const [modelContent, setModelContent] = React.useState({ title: '', content: <></> })
 
   const getModelInfo = (type: 'copyRight' | 'disclosure') => {
     if (type === 'copyRight') {
-      setModelContent({ tittle: 'Copyright And Legal Notice', content: copyRight })
+      setModelContent({ title: 'Copyright And Legal Notice', content: copyRight })
       setVisible(true)
     } else if (type === 'disclosure') {
-      setModelContent({ tittle: 'Disclosure Requirements', content: disclosure })
+      setModelContent({ title: 'Disclosure Requirements', content: disclosure })
       setVisible(true)
     }
   }
@@ -128,7 +128,7 @@ export const Footer = () => {
         </button>
       </div>
 
-      {visible && <Model tittle={modelContent.tittle} content={modelContent.content} setVisible={setVisible} />}
+      {visible && <Model title={modelContent.title} content={modelContent.content} setVisible={setVisible} />}
     </footer>
   )
 }
