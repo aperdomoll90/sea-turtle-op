@@ -2,7 +2,7 @@
 import './styles.css'
 import { useState } from 'react'
 import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
-import { ToggleButton } from '../ToggleButton'
+import { ToggleButton } from '../navigation/ToggleButton'
 const logo = '/assets/logoW.png'
 
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
