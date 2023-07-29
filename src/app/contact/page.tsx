@@ -27,16 +27,6 @@ const Contact = () => {
 		setForm({ ...form, [target.name]: target.value })
 	}
 
-	// const handleFormSubmit = () => {
-	// 	fetch('/path', {
-	// 		method: 'POST',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(form),
-	// 	})
-	// }
-
 	return (
 		<section className='flex justify-evenly w-screen'>
 			<div className='w-2/12'>
