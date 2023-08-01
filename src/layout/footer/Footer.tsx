@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './styles.css'
-import { Model } from '@/components/model/Model'
+import { ContentModel } from '@/components/ContentModel/ContentModel'
 
 const copyRight = (
   <>
@@ -128,7 +128,7 @@ export const Footer = () => {
         </button>
       </div>
 
-      {visible && <Model title={modelContent.title} content={modelContent.content} setVisible={setVisible} />}
+      {visible && <ContentModel title={modelContent.title} content={modelContent.content} setVisible={setVisible} />}
     </footer>
   )
 }

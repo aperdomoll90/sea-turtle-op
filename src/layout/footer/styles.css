@@ -11,15 +11,19 @@ footer {
 
 .footer-text {
   color: #b4b3b3;
-  font-size: 0.8rem;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
+.footer-text p {
+  color: #b4b3b3;
+  font-size: 0.9rem;
+}
+
 .footer-text a {
   color: #fff;
-  margin-left: 0.5rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -97,6 +101,7 @@ footer {
 
 .footer-button {
   transition: 0.5s;
+  margin-left: 0.3rem;
 }
 
 .footer-button:hover {
