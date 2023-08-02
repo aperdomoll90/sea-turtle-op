@@ -7,6 +7,7 @@ const logoRing = '/assets/ring.png'
 import { LeatherbackModel } from '@/components/LoadLeatherback'
 import { GreenTurtleModel } from '@/components/LoadGreenTurtle'
 import { Footer } from '@/layout/footer/Footer'
+import AboutUs from '@/components/aboutUs/aboutUs'
 
 const Model = () => {
   const meshRef = useRef<any>()
@@ -38,11 +39,11 @@ export default function Home() {
       </div>
 
       <div ref={scrollArea} className='home-content-wrapper'>
-        <div className='fixed-test' style={{ '--color': 'rgba(69, 23, 207, 0.175)' } as React.CSSProperties} />
-        <div className='fixed-test' style={{ '--color': 'rgba(207, 23, 23, 0.246)' } as React.CSSProperties} />
-        <div className='fixed-test' style={{ '--color': 'rgba(48, 207, 23, 0.271)' } as React.CSSProperties} />
-        <div className='fixed-test' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties} />
-        <div className='fixed-test last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
+        <div className='home-section hero-section' style={{ '--color': 'rgba(69, 23, 207, 0.175)' } as React.CSSProperties}></div>
+        <AboutUs/>
+        <div className='home-section' style={{ '--color': 'rgba(48, 207, 23, 0.271)' } as React.CSSProperties}></div>
+        <div className='home-section' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
+        <div className='home-section last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
       </div>
     </div>
   )
