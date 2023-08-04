@@ -1,0 +1,40 @@
+.our-beginnings-section {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+}
+
+.our-beginnings-section-content {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  padding: 2rem;
+}
+.our-beginnings-button {
+  margin-top: 5rem;
+}
+
+/* Ipads and above */
+@media (width > 450px) {
+  .our-beginnings-section {
+    justify-content: flex-start;
+  }
+  .our-beginnings-section-content {
+    padding: 5rem;
+    margin-left: 5rem;
+  }
+}
+
+/* Medium devices */
+@media (width >= 900px) {
+    .our-beginnings-section-content {
+        width: 45%;
+      }
+  }
+  
+  /* Large devices */
+  @media (width > 1500px) {
+    .our-beginnings-section-content {
+        width: 30%;
+      }
+  }

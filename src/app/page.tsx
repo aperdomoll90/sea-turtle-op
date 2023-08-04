@@ -8,6 +8,7 @@ import { LeatherbackModel } from '@/components/LoadLeatherback'
 import { GreenTurtleModel } from '@/components/LoadGreenTurtle'
 import { Footer } from '@/layout/footer/Footer'
 import AboutUs from '@/components/aboutUs/aboutUs'
+import OurBeginning from '@/components/ourBeginning/ourBeginning'
 
 const Model = () => {
   const meshRef = useRef<any>()
@@ -40,8 +41,8 @@ export default function Home() {
 
       <div ref={scrollArea} className='home-content-wrapper'>
         <div className='home-section hero-section' style={{ '--color': 'rgba(69, 23, 207, 0.175)' } as React.CSSProperties}></div>
-        <AboutUs/>
-        <div className='home-section' style={{ '--color': 'rgba(48, 207, 23, 0.271)' } as React.CSSProperties}></div>
+        <AboutUs />
+        <OurBeginning />
         <div className='home-section' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
         <div className='home-section last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
       </div>
