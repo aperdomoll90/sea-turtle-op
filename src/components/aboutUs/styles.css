@@ -39,6 +39,10 @@
   margin-top: 5rem;
 }
 
+.our-beginnings-modal-text {
+  font-size: 0.2rem;
+}
+
 /* Ipads and above */
 @media (width > 450px) {
   .home-section {
