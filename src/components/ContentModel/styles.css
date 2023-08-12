@@ -1,7 +1,7 @@
 .model-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  padding: 4rem;
+  padding: 4rem 2rem 0 2rem;
   position: fixed;
   inset: 0;
   z-index: 99;
@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   background: #060117f4;
+  overflow: scroll;
 }
 
 .model-container::after {
@@ -23,17 +24,19 @@
 }
 
 .model-content-container {
-  width: 80%;
+  width: 100%;
+  height: fit-content;
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 .model-content-button {
-  position: absolute;
-  bottom: 5rem;
-  right: 5rem;
+  margin: 2rem 0 2rem 0;
 }
 
+.model-content-container p {
+  font-size: 0.55rem;
+}
 
 /* Ipads */
 @media (width >= 450px) {
@@ -43,10 +46,18 @@
   .model-content-container p {
     font-size: 1rem;
   }
+  .model-content-button {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+  }
 }
 
 /* Medium devices */
 @media (width >= 900px) {
+  .model-container {
+    padding: 6rem;
+  }
   .model-content-container {
     width: 80%;
   }
@@ -58,4 +69,3 @@
     font-size: 1.3rem;
   }
 }
-

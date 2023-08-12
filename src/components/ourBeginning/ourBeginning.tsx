@@ -5,7 +5,7 @@ import './styles.css'
 const OurBeginning = () => {
   const [visible, setVisible] = React.useState(false)
   const modelContent = (
-    <p>
+    <p className='our-beginnings-modal-text'>
       Like so many things in life, it just began, without looking for it or even knowing about it.
       <br />
       On an early July morning in 2007, Siouxzen WhiteCloud made her way through the humid darkness to a Deerfield Beach to teach yoga. As she crossed A1A a sight awaited her. It was not a new sight, it had happened a thousand times before, but this time the right person was looking... <br />
