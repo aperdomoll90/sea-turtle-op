@@ -1,15 +1,27 @@
+import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import db from '@/utils/mongoConnect'
+import { authMiddleware } from '@/utils/authMiddleware'
 
 const users = db.collection('users')
 
-export async function GET() {
-	return NextResponse.json('test here ')
+interface TreqBody {
+	email: string
+	password: string
 }
 
-export const POST = async () => {
-	const userAdded = await users.insertOne({ email: 'Jonathans199@gmail.com', password: '112314' })
-	console.log(userAdded)
+export const GET = async () => {
+	const headersInstance = headers()
+	const authorization = headersInstance.get('authorization')
 
-	return NextResponse.json('Posting here ')
+	let allUsers
+	if (authorization === 'Bearer undefined') {
+		console.log('not logged in')
+		return NextResponse.json({ error: 'not logged in' })
+	} else {
+		allUsers = await users.find().toArray()
+		return NextResponse.json(allUsers)
+	}
+
+	return NextResponse.json(allUsers ? allUsers : null)
 }
