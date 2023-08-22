@@ -1,0 +1,14 @@
+.marquee-wrapper {
+  width: 100%;
+  height: fit-content;
+}
+.marquee-wrapper h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+@media (width >= 900px) {
+  .marquee-wrapper h3 {
+    font-size: 2rem;
+  }
+}
