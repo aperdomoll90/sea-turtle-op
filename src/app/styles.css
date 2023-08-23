@@ -56,8 +56,6 @@
   position: relative;
   outline: 2px solid var(--color);
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero-section::before {

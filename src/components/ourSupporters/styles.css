@@ -1,0 +1,47 @@
+.our-supporters-section-content {
+  height: 50%;
+  width: 100%;
+}
+
+.supporter-company-logo {
+  object-fit: contain;
+  height: 6rem;
+  width: 6rem;
+  flex-shrink: 0;
+  margin: 0.5rem;
+}
+
+.donor-card-group {
+  height: fit-content;
+  display: flex;
+  place-items: center;
+  justify-content: flex-start;
+}
+.donor-card {
+  height: 10rem;
+  min-width: 15rem;
+  background: #e5e2e216;
+  margin: 2rem;
+}
+
+/* Ipads */
+@media (width >= 450px) {
+  .supporter-company-logo {
+    margin: 1rem;
+  }
+}
+
+/* Medium devices */
+@media (width >= 900px) {
+  .our-supporters-section-content {
+    width: 40%;
+    margin-right: 2rem;
+  }
+  .supporter-company-logo {
+    margin: 2rem;
+  }
+  .donor-card {
+    height: 10rem;
+    aspect-ratio: 1.5 /1;
+  }
+}
