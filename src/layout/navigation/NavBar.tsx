@@ -75,9 +75,9 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
     return (
       <>
         {content?.map((item: menuItemsArrayPropsTypes, index: number) => (
-          <li className='NavBar-active'>
-            <a key={item.id} className='NavBar-link' href={item.link}>
-            <span aria-hidden='true'>{(index < 10) ? `0${index}` : index}</span>
+          <li key={item.id} className='NavBar-active'>
+            <a className='NavBar-link' href={item.link}>
+              <span aria-hidden='true'>{index < 10 ? `0${index}` : index}</span>
               {item.label}
             </a>
           </li>
