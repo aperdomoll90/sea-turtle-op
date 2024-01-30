@@ -17,12 +17,12 @@
 /* navbar */
 
 .primary-navigation {
-  --gap: 2em;
+  --gap: 1em;
   list-style: none;
   margin: 0;
   position: fixed;
   z-index: 99999;
-  inset: 0 0 0 50%;
+  inset: 0 0 0 70%;
   flex-direction: column !important;
   padding: min(30vh, 10rem) 4em;
   transform: translateX(100%);
@@ -37,60 +37,24 @@
   transform: translateX(0%);
 }
 
-.NavBar-link,
-.accordion-button {
+.NavBar-link{
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
+  transition: display 2s ease-in-out;
 }
 
 .NavBar-active a:hover {
-  color: #ffffff;
-  background-color: #00a4bd;
+  color: var(--white);
+  background-color: var(--charcoal)
 }
 
-.NavBar-link > [aria-hidden='true'],
-.accordion-button > [aria-hidden='true'] {
+.NavBar-link > [aria-hidden='true']{
   font-weight: 700;
   margin-inline-end: 0.5em;
   transition: display 2s ease-in-out;
-}
-
-.accordion {
-  display: inline-block;
-  position: relative;
-  transition: display 2s ease-in-out;
-}
-
-.accordion-content {
-  display: none;
-  position: relative;
-  margin-top: 1rem;
-  width: 100%;
-  overflow: auto;
-  transition: display 2s ease-in-out;
-  opacity: 0;
-}
-
-.accordion:hover .accordion-content {
-  display: block;
-  opacity: 1;
-}
-
-.accordion-link {
-  display: block;
-  color: #fff;
-  margin-left: 1rem;
-  padding: 0.6rem;
-  text-decoration: none;
-  font-size: 0.7rem;
-}
-
-.accordion-content a:hover {
-  color: #ffffff;
-  background-color: #00a4bd;
 }
 
 @media (max-width: 35em) {

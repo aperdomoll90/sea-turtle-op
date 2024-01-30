@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: rgb(6, 1, 23);
+  --offBlack: #080808;
+  --richBlack: #00171F;
+  --charcoal:#2E4052;
+  --offWhite: #b4b3b3;
+  --white: #fff;  
+  --mainBackgroundColor: var(--offBlack);
+  --buttonColor: var(--richBlack);
+  --buttonHover: var(--charcoal);
 }
 
 body {
-  color: #fff;
-  background: var(--background);
+  color: var(--white);
+  background: var(--mainBackgroundColor);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,4 +50,15 @@ body {
 
 .ff-sans-cond {
   font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.basic-button {
+  color: var(--white);
+  background: var(--buttonColor);
+  transition: all 0.3s ease-in-out;
+}
+
+.basic-button:hover {
+  background: var(--buttonHover);
+
 }

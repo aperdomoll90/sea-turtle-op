@@ -1,0 +1,93 @@
+#home-contact-section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#home-contact-logo-ring {
+  height: 130vh;
+  aspect-ratio: 1/1;
+  position: absolute;
+  bottom: -50%;
+  right: -10%;
+}
+
+.home-contact-services-container {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  bottom: -30%;
+  left: 4rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home-contact-services {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: absolute;
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(10.2rem);
+}
+
+.home-contact-services:nth-child(1) {
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
+}
+
+.home-contact-services:nth-child(4) {
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
+}
+
+.rotation-stabilizer-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotate(calc(360deg / -12 * var(--i)));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-contact-services-icons {
+  position: relative;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  margin-right: 0.5rem;
+}
+
+.home-contact-services-text {
+  font-size: 0.9rem;
+  color:var(--white);
+}
+
+#home-contact-section-button {
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: 25%;
+    background-color: var(--mainBackgroundColor);
+    z-index: 99;
+}
+
+#home-contact-section-button:hover {
+    background-color: var(--richBlack);
+}
+#home-contact-section-button:active {
+    background-color: var(--mainBackgroundColor);
+}
+
+#home-contact-form-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -10,6 +10,8 @@ import { Footer } from '@/layout/footer/Footer'
 import AboutUs from '@/components/aboutUs/aboutUs'
 import OurBeginning from '@/components/ourBeginning/ourBeginning'
 import OurSupporters from '@/components/ourSupporters/ourSupporters'
+import RouteLayout from '@/components/routeLayout/routeLayout'
+import HomeSectionContactUs from '@/components/homeSectionContactUs/homeSectionContactUs'
 
 const Model = () => {
   const meshRef = useRef<any>()
@@ -45,7 +47,7 @@ export default function Home() {
         <AboutUs />
         <OurBeginning />
         <OurSupporters />
-        <div className='home-section last' style={{ '--color': 'rgba(207, 23, 87, 0.236)' } as React.CSSProperties}></div>
+        <HomeSectionContactUs />
       </div>
     </div>
   )

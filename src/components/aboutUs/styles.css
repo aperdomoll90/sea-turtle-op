@@ -4,30 +4,6 @@
   z-index: 100;
 }
 
-.about-us-section::before {
-  content: '';
-  width: 15%;
-  height: 25%;
-  position: absolute;
-  top: 9rem;
-  right: 2rem;
-  z-index: -10;
-  background: url('/assets/chevron.png') no-repeat center;
-  background-size: contain;
-}
-
-.about-us-section::after {
-  content: '';
-  width: 25%;
-  height: 40%;
-  position: absolute;
-  bottom: -15%;
-  left: 0rem;
-  z-index: -10;
-  background: url('/assets/chevron.png') no-repeat center;
-  background-size: contain;
-}
-
 .about-us-section-content {
   position: relative;
   height: fit-content;
