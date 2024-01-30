@@ -8,85 +8,81 @@ const logo = '/assets/logoW.png'
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
 
-  const helpLinks = [
+  const allLinks = [
+    {
+      id: 0,
+      label: 'Home',
+      link: '/',
+    },
     {
       id: 1,
+      label: 'Shop',
+      link: '/shop',
+    },
+    {
+      id: 2,
       label: 'Donations',
       link: '/donations',
     },
     {
-      id: 2,
+      id: 3,
       label: 'Membership',
       link: '/membership',
     },
     {
-      id: 3,
+      id: 4,
       label: 'Name a hatchling',
       link: '/hatchling',
     },
     {
-      id: 4,
+      id: 5,
       label: 'Volunteer',
       link: '/volunteer',
     },
-  ]
-  const eventsLinks = [
     {
-      id: 1,
+      id: 6,
       label: 'Turtle Treks',
       link: '/turtletreks',
     },
     {
-      id: 2,
+      id: 7,
       label: 'Tablings',
       link: '/tablings',
     },
-  ]
-
-  const newsLinks = [
     {
-      id: 1,
+      id: 8,
       label: 'News',
       link: '/news',
     },
     {
-      id: 2,
+      id: 9,
       label: 'Gallery',
       link: '/gallery',
     },
-  ]
-
-  const contactLinks = [
     {
-      id: 1,
+      id: 10,
       label: 'News',
       link: '/news',
     },
+    {
+      id: 11,
+      label: 'Contact',
+      link: '/contact',
+    },
   ]
 
-  const renderSingleMenuLink = (index: number, link: string, children: string) => (
-    <li className='NavBar-active'>
-      <a className='NavBar-link' href={link}>
-        <span aria-hidden='true'>0{index}</span>
-        {children}
-      </a>
-    </li>
-  )
-
-  const renderAccordionBullet = (indicator: number, label: string, content: any) => {
-    const renderBullet = content?.map((item: menuItemsArrayPropsTypes, index: number) => (
-      <a key={item.id} className='accordion-link' href={item.link}>
-        {item.label}
-      </a>
-    ))
+  const renderAllAccordionBullet = (indicator: number, label: string, content: any) => {
     return (
-      <li className='accordion'>
-        <a className='accordion-button uppercase ff-sans-cond'>
-          <span aria-hidden='true'>0{indicator}</span>
-          {label}
-        </a>
-        <ul className='accordion-content'>{renderBullet}</ul>
-      </li>
+      <>
+        {content?.map((item: menuItemsArrayPropsTypes, index: number) => (
+          <li className='NavBar-active'>
+            <a key={item.id} className='NavBar-link' href={item.link}>
+            <span aria-hidden='true'>{(index < 10) ? `0${index}` : index}</span>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </>
     )
   }
 
@@ -106,16 +102,8 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         buttonBackgroundColor='transparent'
       />
       <nav className='navbar'>
-        <ul
-          id='primary-navigation'
-          aria-expanded={visible}
-          data-visible={visible}
-          className='primary-navigation uppercase ff-sans-cond flex-row'>
-          {renderSingleMenuLink(0, '/', 'Home')}
-          {renderSingleMenuLink(1, '/shop', 'shop')}
-          {renderAccordionBullet(2, 'Events', eventsLinks)}          {renderAccordionBullet(3, 'How to help', helpLinks)}
-          {renderAccordionBullet(4, 'Whats new', newsLinks)}
-          {renderSingleMenuLink(5, '/contact', 'Contact')}
+        <ul id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
+          {renderAllAccordionBullet(0, 'All', allLinks)}
         </ul>
       </nav>
     </section>

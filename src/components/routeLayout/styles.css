@@ -2,35 +2,10 @@
   height: 100vh;
   width: 100vw;
   position: relative;
-  background: linear-gradient(to bottom, #060117 0%, #060117 50%, #0b1939 50%, #0b1939 100%);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.routeLayout-wrapper::before {
-  content: '';
-  width: 25%;
-  height: 25%;
-  position: absolute;
-  bottom: 4.3rem;
-  left: 1rem;
-  z-index: 0;
-  background: url('/assets/chevronDark.png') no-repeat center;
-  background-size: contain;
-}
-
-.routeLayout-wrapper::after {
-  content: '';
-  width: 30%;
-  height: 50%;
-  position: absolute;
-  top: 7rem;
-  right: 0;
-  z-index: 0;
-  background: url('/assets/chevron.png') no-repeat center;
-  background-size: contain;
 }
 
 .routeLayout-header {
