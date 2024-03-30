@@ -4,14 +4,19 @@
 
 :root {
   --offBlack: #080808;
-  --richBlack: #00171F;
-  --charcoal:#2E4052;
+  --richBlack: #00171f;
+  --charcoal: #2e4052;
   --offWhite: #b4b3b3;
-  --white: #fff;  
+  --white: #fff;
   --mainBackgroundColor: var(--offBlack);
   --buttonColor: var(--richBlack);
   --buttonHover: var(--charcoal);
+  --green:#206012;
+  --greenHover:#458636;
+  --red:#B60000;
+  --lightBlue:#70CCCB
 }
+
 
 body {
   color: var(--white);
@@ -60,5 +65,6 @@ body {
 
 .basic-button:hover {
   background: var(--buttonHover);
-
 }
+
+

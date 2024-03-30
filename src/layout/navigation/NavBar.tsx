@@ -8,68 +8,9 @@ const logo = '/assets/logoW.png'
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
 
-  const allLinks = [
-    {
-      id: 0,
-      label: 'Home',
-      link: '/',
-    },
-    {
-      id: 1,
-      label: 'Shop',
-      link: '/shop',
-    },
-    {
-      id: 2,
-      label: 'Donations',
-      link: '/donations',
-    },
-    {
-      id: 3,
-      label: 'Membership',
-      link: '/membership',
-    },
-    {
-      id: 4,
-      label: 'Name a hatchling',
-      link: '/hatchling',
-    },
-    {
-      id: 5,
-      label: 'Volunteer',
-      link: '/volunteer',
-    },
-    {
-      id: 6,
-      label: 'Turtle Treks',
-      link: '/turtletreks',
-    },
-    {
-      id: 7,
-      label: 'Tablings',
-      link: '/tablings',
-    },
-    {
-      id: 8,
-      label: 'News',
-      link: '/news',
-    },
-    {
-      id: 9,
-      label: 'Gallery',
-      link: '/gallery',
-    },
-    {
-      id: 10,
-      label: 'News',
-      link: '/news',
-    },
-    {
-      id: 11,
-      label: 'Contact',
-      link: '/contact',
-    },
-  ]
+  const shop = 'https://SeaTurtleOP.square.site/s/order'
+  const donation = 'https://square.link/u/dlO6GG5f'
+  const turtleTrek = 'https://seaturtleop.square.site/turtle-treks'
 
   const renderAllAccordionBullet = (indicator: number, label: string, content: any) => {
     return (
@@ -83,6 +24,16 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
           </li>
         ))}
       </>
+    )
+  }
+
+  const renderAccordionBullet = (link: string, label: string) => {
+    return (
+      <div className='NavBar-active'>
+        <a className='NavBar-link' href={link}>
+          {label}
+        </a>
+      </div>
     )
   }
 
@@ -102,9 +53,20 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         buttonBackgroundColor='transparent'
       />
       <nav className='navbar'>
-        <ul id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
-          {renderAllAccordionBullet(0, 'All', allLinks)}
-        </ul>
+        <div id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
+          {/* {renderAllAccordionBullet(0, 'All', allLinks)} */}
+          {renderAccordionBullet('/', 'Home')}
+          {renderAccordionBullet(shop, 'Shop')}
+          <p className='navbar-dividers'>How to support Us</p>
+          {renderAccordionBullet(donation, 'Donations')}
+          {renderAccordionBullet('/hatchling', 'Name a hatchling')}
+          {renderAccordionBullet('/volunteer', 'Volunteer')}
+          {renderAccordionBullet('/membership', 'Membership')}
+          {renderAccordionBullet(turtleTrek, 'Turtle Treks')}
+          <p className='navbar-dividers'>Get to Know us</p>
+          {/* {renderAccordionBullet('/gallery', 'Gallery')} */}
+          {renderAccordionBullet('/contact', 'Contact')}
+        </div>
       </nav>
     </section>
   )
