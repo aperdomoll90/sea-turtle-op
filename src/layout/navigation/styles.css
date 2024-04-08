@@ -9,9 +9,10 @@
 }
 
 .primary-logo {
-  height: 4rem;
+  height: 9rem;
   width: auto;
-  margin: 3rem;
+  margin-left: 2rem;
+  margin-top: 4rem;
 }
 
 /* navbar */
@@ -37,15 +38,15 @@
   transform: translateX(0%);
 }
 
-.navbar-dividers{
+.navbar-dividers {
   width: 100%;
   line-height: 1.5;
 }
 
-.NavBar-link{
+.NavBar-link {
   text-decoration: none;
   color: var(--lightBlue);
-  font-size: 1.6vw; 
+  font-size: 1.6vw;
   font-weight: 600;
   cursor: pointer;
   transition: display 2s ease-in-out;
@@ -55,14 +56,14 @@
 }
 
 .NavBar-active {
- width: 45%;
- height: 8rem;
- outline:2px solid var(--lightBlue);
- border-radius: 5px;
- display: flex;
- align-items: center;
- justify-content: center;
- transition: all 1s ease-in-out;
+  width: 45%;
+  height: 8rem;
+  outline: 2px solid var(--lightBlue);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
 }
 
 .NavBar-active:hover {
