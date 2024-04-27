@@ -1,76 +1,129 @@
+.name-hatchling-alt-card {
+  width: 18rem;
+  height: 25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+  color: black;
+  font-weight: 900;
+}
 
-.name-hatchling-card {
-    width: 18rem;
-    height: 25rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-    border-radius: 5px;
-    outline: 2px solid rgba(255, 255, 0, 0.179);
-    font-size: 0.9rem;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .name-hatchling-card:hover {
-  box-shadow: 0 0 10px 5px var(--green);
-  }
-  
-  .name-hatchling-card h3 {
-    margin-top: 3rem;
-    align-self: start;
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--green);
-  }
-  
-  .name-hatchling-card ul {
+.name-hatchling-alt-card::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(248, 248, 245, 0);
+  filter: blur(0px);
+  transition: all 0.5s ease-in-out;
+}
+.name-hatchling-alt-card[data-visible='true']::before {
+  background: rgba(248, 248, 245, 0.651);
+  filter: blur(5px);
+}
+
+.name-hatchling-alt-card h3 {
+  margin-top: 0.2rem;
+  align-self: start;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  /* color: var(--green); */
+}
+
+.circular-button {
+  position: absolute;
+  z-index: 5;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.circular-button:hover {
+  background-color: #d2c9c9;
+}
+
+.plus-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.circular-button[data-visible='true'] {
+  transform: rotate(315deg) scale(1.3);
+}
+
+.name-hatchling-alt-card-content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.name-hatchling-alt-card-content ul {
+  list-style: inside !important;
+  font-weight: 800;
+  transform: translateY(10%);
+  transition: all 0.5s ease-in-out;
+}
+
+.name-hatchling-alt-card-content[data-visible='true'] {
+  opacity: 1;
+
+  ul {
     list-style: inside !important;
+    font-weight: 800;
+    transform: translateY(0);
   }
-  .name-hatchling-card ul li {
-    margin-bottom: 0.6rem;
-  }
-  .hatchling-image {
-    width: 50%;
-    height: auto;
-    position: absolute;
-    top: -5%;
-    left: 60%;
-    transition: all 0.5s ease-in-out;
-  }
-  .name-hatchling-card:hover .hatchling-image {
-    transform: translateX(-70%) translateY(-20%) scale(1.7);
-  }
-  
-  .name-hatchling-button {
-    width: 4rem;
-    height: 2rem;
-    background: var(--green);
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .name-hatchling-button:hover {
-    background: var(--greenHover);
-  }
-  
-  .name-hatchling-button:active {
-      background: var(--red);
-    }
-  .name-hatchling-details {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
+}
+
+.name-hatchling-alt-card ul li {
+  margin-bottom: 0.8rem;
+}
+
+.name-hatchling-alt-button {
+  width: 5rem;
+  height: 2.5rem;
+  position: absolute;
+  bottom: .5rem;
+  left: .5rem;
+  background: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-hatchling-alt-button:hover {
+  background: rgb(170, 168, 168);
+}
+
+.name-hatchling-alt-button:active {
+  background: var(--red);
+}

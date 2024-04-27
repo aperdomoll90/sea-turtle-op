@@ -1,6 +1,9 @@
 import React from 'react'
 import { ContentModel } from '../ContentModel/ContentModel'
 import './styles.css'
+const volunteers = '../../assets/volunteers.jpg'
+const release = '../../assets/release.jpg'
+const whiteclouds = '../../assets/Whiteclouds.jpg'
 
 const OurBeginning = () => {
   const [visible, setVisible] = React.useState(false)
@@ -35,6 +38,9 @@ const OurBeginning = () => {
         <button className='action-button our-beginnings-button' onClick={() => setVisible(true)}>
           Read More
         </button>
+        <img src={release} alt='photography of release of a baby turtle' className='our-beginnings-image' />
+        <img src={volunteers} alt='Volunteer team photography' className='our-beginnings-image rotated' />
+        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='our-beginnings-image bottom' />
       </div>
       {visible && <ContentModel title='How STOP Started' content={modelContent} setVisible={setVisible} />}
     </div>

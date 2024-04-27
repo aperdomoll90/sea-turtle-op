@@ -13,6 +13,16 @@
   width: auto;
   margin-left: 2rem;
   margin-top: 4rem;
+  transform-origin: top;
+  animation: logo-animation linear forwards;
+  animation-timeline: scroll();
+}
+
+@keyframes logo-animation {
+  10%,
+  100% {
+    transform: scale(0.6) translate(-3rem, -2rem);
+  }
 }
 
 /* navbar */
@@ -22,59 +32,61 @@
   z-index: 99999;
   flex-wrap: wrap;
   overflow: scroll;
-  gap: 1em;
   inset: 0 0 0 70%;
   margin: 0;
   padding: 5.5rem 2rem 2rem 2rem;
   transform: translateX(100%);
-  transition: transform 350ms ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 @supports (backdrop-filter: blur(1rem)) {
   .primary-navigation {
     backdrop-filter: blur(1rem);
   }
 }
+
 .primary-navigation[data-visible='true'] {
   transform: translateX(0%);
 }
 
 .navbar-dividers {
   width: 100%;
-  line-height: 1.5;
+  height: 2rem;
+  font-size: 0.9rem;
+  position: relative;
+}
+.navbar-dividers::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: var(--lightBlue);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.NavBar-active {
+  width: 100%;
+  height: 3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  transition: display 0.5s ease-in-out;
+}
+
+.NavBar-active:hover {
+  background-color: #70ccca72;
+  color: black;
 }
 
 .NavBar-link {
   text-decoration: none;
   color: var(--lightBlue);
-  font-size: 1.6vw;
+  font-size: 0.9vw;
   font-weight: 600;
   cursor: pointer;
-  transition: display 2s ease-in-out;
-  mix-blend-mode: screen;
-  margin: 0 auto;
-  text-align: center;
+  text-align: flex-start;
 }
-
-.NavBar-active {
-  width: 45%;
-  height: 8rem;
-  outline: 2px solid var(--lightBlue);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s ease-in-out;
-}
-
-.NavBar-active:hover {
-  background-color: var(--lightBlue);
-}
-
-/* .NavBar-link > [aria-hidden='true']{
-  font-weight: 700;
-  margin-inline-end: 0.5em;
-  transition: display 2s ease-in-out;
-} */
 
 @media (max-width: 35em) {
   .primary-logo {

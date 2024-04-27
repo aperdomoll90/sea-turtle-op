@@ -1,15 +1,27 @@
-.membership-container {
+#membership-wrapper{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  background: var(--dark);
+
+}
+.membership-container {
+  width: 95%;
+  height: 80%;
+  overflow: scroll;
   position: relative;
   display: flex;
-  overflow-x: scroll;
   flex-direction: row;
-  flex-wrap:nowrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 3rem;
-  padding: 4rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap:wrap;
+  gap: 1.5rem;
+  justify-self: flex-end;
+  padding-bottom: 5rem;
 }
 
 .name-hatchling-card {

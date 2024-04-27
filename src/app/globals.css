@@ -11,12 +11,19 @@
   --mainBackgroundColor: var(--offBlack);
   --buttonColor: var(--richBlack);
   --buttonHover: var(--charcoal);
-  --green:#206012;
-  --greenHover:#458636;
-  --red:#B60000;
-  --lightBlue:#70CCCB
-}
+  --green: #206012;
+  --greenHover: #458636;
+  --red: #b60000;
+  --lightBlue: #70cccb;
 
+  --gradientColor-bg1: rgba(140, 21, 21, 0.181); /* Red */
+  --gradientColor-bg2: rgba(20, 122, 47, 0.195); /* Green */
+  --gradientColor-bg3: rgba(14, 77, 140, 0.173); /* Blue */
+  --gradientColor-bg4: rgba(168, 136, 21, 0.21); /* Yellow */
+  --gradientColor-bg5: rgba(8, 8, 8, 0.502); /* Black */
+  --circle-size: 80%;
+  --blending: hard-light;
+}
 
 body {
   color: var(--white);
@@ -29,7 +36,6 @@ body {
 }
 
 .layout-page-container {
-  height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
@@ -66,5 +72,3 @@ body {
 .basic-button:hover {
   background: var(--buttonHover);
 }
-
-

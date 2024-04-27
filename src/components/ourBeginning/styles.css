@@ -1,7 +1,6 @@
 .our-beginnings-section {
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
 }
 
 .our-beginnings-section-content {
@@ -14,6 +13,28 @@
   margin-top: 5rem;
 }
 
+.our-beginnings-image {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  top: -10%;
+  right: -80%;
+}
+
+.rotated {
+  z-index: 0;
+  top: 40%;
+  right: -90%;
+  transform: rotate(35deg);
+}
+
+.bottom {
+  z-index: 0;
+  width: 60%;
+  top: 80%;
+  right: -10%;
+}
 /* Ipads and above */
 @media (width > 450px) {
   .our-beginnings-section {
@@ -27,14 +48,14 @@
 
 /* Medium devices */
 @media (width >= 900px) {
-    .our-beginnings-section-content {
-        width: 45%;
-      }
+  .our-beginnings-section-content {
+    width: 45%;
   }
-  
-  /* Large devices */
-  @media (width > 1500px) {
-    .our-beginnings-section-content {
-        width: 30%;
-      }
+}
+
+/* Large devices */
+@media (width > 1500px) {
+  .our-beginnings-section-content {
+    width: 30%;
   }
+}

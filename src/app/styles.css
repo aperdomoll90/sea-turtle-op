@@ -1,16 +1,13 @@
-
 #home-wrapper {
   position: relative;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: rgb(237, 236, 241); */
-  /* background: rgb(6, 1, 23); */
-  background: var(--mainBackgroundColor);;
+  background: var(--mainBackgroundColor);
   overflow-x: hidden;
 }
 
@@ -33,27 +30,38 @@
     transform: translateY(-2%);
   }
 }
+
+.home-content-wrapper {
+  position: relative;
+  padding-top: 70vh;
+}
+
 #home-canvas-logo-ring {
   height: 75vh;
   aspect-ratio: 1/1;
   position: absolute;
+  top: calc(50vh - 75vh / 2);
   opacity: 0.5;
+  animation: logo-ring-animation linear forwards;
+  animation-timeline: scroll(root);
 }
 
-.home-content-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 500vh;
-  z-index: 100;
+@keyframes logo-ring-animation {
+
+  7%,
+  100%  {
+    opacity: 0;
+  }
+  10%,
+  100% {
+    transform: scale(3) rotate(180deg);
+  }
 }
 
 .home-section {
   width: 100vw;
   height: 100vh;
   position: relative;
-  /* outline: 2px solid var(--color); */
   display: flex;
 }
 

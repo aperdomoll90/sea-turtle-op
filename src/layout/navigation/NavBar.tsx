@@ -12,28 +12,11 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const donation = 'https://square.link/u/dlO6GG5f'
   const turtleTrek = 'https://seaturtleop.square.site/turtle-treks'
 
-  const renderAllAccordionBullet = (indicator: number, label: string, content: any) => {
-    return (
-      <>
-        {content?.map((item: menuItemsArrayPropsTypes, index: number) => (
-          <li key={item.id} className='NavBar-active'>
-            <a className='NavBar-link' href={item.link}>
-              <span aria-hidden='true'>{index < 10 ? `0${index}` : index}</span>
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </>
-    )
-  }
-
   const renderAccordionBullet = (link: string, label: string) => {
     return (
-      <div className='NavBar-active'>
-        <a className='NavBar-link' href={link}>
-          {label}
-        </a>
-      </div>
+      <a className='NavBar-link NavBar-active' href={link}>
+        {label}
+      </a>
     )
   }
 
@@ -52,9 +35,8 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         }}
         buttonBackgroundColor='transparent'
       />
-      <nav className='navbar'>
+      <div className='navbar'>
         <div id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
-          {/* {renderAllAccordionBullet(0, 'All', allLinks)} */}
           {renderAccordionBullet('/', 'Home')}
           {renderAccordionBullet(shop, 'Shop')}
           <p className='navbar-dividers'>How to support Us</p>
@@ -67,7 +49,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
           {/* {renderAccordionBullet('/gallery', 'Gallery')} */}
           {renderAccordionBullet('/contact', 'Contact')}
         </div>
-      </nav>
+      </div>
     </section>
   )
 }

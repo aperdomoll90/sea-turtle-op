@@ -5,12 +5,9 @@ import { CameraControls } from '@react-three/drei'
 import { Canvas } from 'react-three-fiber'
 const logoRing = '/assets/ring.png'
 import { LeatherbackModel } from '@/components/LoadLeatherback'
-import { GreenTurtleModel } from '@/components/LoadGreenTurtle'
-import { Footer } from '@/layout/footer/Footer'
 import AboutUs from '@/components/aboutUs/aboutUs'
 import OurBeginning from '@/components/ourBeginning/ourBeginning'
 import OurSupporters from '@/components/ourSupporters/ourSupporters'
-import RouteLayout from '@/components/routeLayout/routeLayout'
 import HomeSectionContactUs from '@/components/homeSectionContactUs/homeSectionContactUs'
 
 const Model = () => {
@@ -43,10 +40,9 @@ export default function Home() {
       </div>
 
       <div ref={scrollArea} className='home-content-wrapper'>
-        <div className='home-section hero-section' style={{ '--color': 'rgba(69, 23, 207, 0.175)' } as React.CSSProperties}></div>
         <AboutUs />
         <OurBeginning />
-        <OurSupporters />
+        {/* <OurSupporters /> */}
         <HomeSectionContactUs />
       </div>
     </div>

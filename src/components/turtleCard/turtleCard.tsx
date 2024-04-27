@@ -1,26 +1,40 @@
+import Link from 'next/link'
 import './styles.css'
-interface CardProps { 
-    src: string
-    price: number
-    title: string
-    link: string
-    contentList: JSX.Element
+import { useState } from 'react'
+interface CardProps {
+  src: string
+  price: number
+  title: string
+  link: string
+  contentList: JSX.Element
 }
 
-export const Card: React.FC<CardProps>  = ({ src, price, title, link, contentList }) => {
+const PlusSVG = () => (
+  <svg className='plus-svg' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M12 5.5V18.5' stroke='#333333' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M5.5 12H18.5' stroke='#333333' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+  </svg>
+)
+
+export const Card: React.FC<CardProps> = ({ src, price, title, link, contentList }) => {
+  const [visible, setVisible] = useState(false)
+
   return (
-    <span className='name-hatchling-card'>
-      <img src={src} alt={`sea-turtle-hatchling`} className='hatchling-image' />
+    <div className='name-hatchling-alt-card' data-visible={visible} style={{ backgroundImage: `url(${src})` }}>
       <h3>{title}</h3>
-      {contentList}
-      <div className='name-hatchling-details'>
-        <p>
-          Price: <span>${price}</span>
-        </p>
-        <a className='name-hatchling-button' href={link}>
-          Sign up
-        </a>
+      <div className='name-hatchling-alt-card-content' data-visible={visible} aria-hidden={!visible}>
+        {contentList}
+        <Link href={link}>
+          <button className='name-hatchling-alt-button' role='button'>
+            <p>
+              Give <span>${price}</span>
+            </p>
+          </button>
+        </Link>
       </div>
-    </span>
+      <button className='circular-button' data-visible={visible} onClick={() => setVisible(!visible)}>
+        <PlusSVG />
+      </button>
+    </div>
   )
 }

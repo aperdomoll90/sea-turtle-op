@@ -2,6 +2,7 @@
 import RouteLayout from '@/components/routeLayout/routeLayout'
 import './styles.css'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const volunteerFormLink = 'https://forms.office.com/r/cMvZwGvqMm'
 
@@ -67,14 +68,21 @@ const accordionData = [
     ),
   },
 ]
-
+const PlusSVG = () => (
+  <svg className='plus-svg' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M12 5.5V18.5' stroke='#333333' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M5.5 12H18.5' stroke='#333333' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+  </svg>
+)
 const Volunteer = () => {
   const [activeIndex, setActiveIndex] = useState(null)
 
   const handleAccordionClick = index => {
     setActiveIndex(prevIndex => (prevIndex === index ? null : index))
   }
-
+  const getOpenValue = (index: number) => {
+    return activeIndex === index ? true : false
+  }
   return (
     <RouteLayout
       route='Volunteer'
@@ -84,21 +92,29 @@ const Volunteer = () => {
         <div className='accordion'>
           {accordionData.map((item, index) => (
             <div className='accordion-item' key={index}>
-              <div className={`${activeIndex === index ? 'accordion-header active' : 'accordion-header'}`} onClick={() => handleAccordionClick(index)}>
+              <div data-active={getOpenValue(index)} className='accordion-header' onClick={() => handleAccordionClick(index)}>
+                <button data-open={getOpenValue(index)} className='accordion-button' role='button'>
+                  <PlusSVG />
+                </button>
                 {item.title}
               </div>
-              <div className={`${activeIndex === index ? 'accordion-content open' : 'accordion-content'}`}>{item.content}</div>
+              <div aria-hidden={!getOpenValue(index)} data-open={getOpenValue(index)} className='accordion-content'>
+                {item.content}
+              </div>
             </div>
           ))}
-          <p>
-            Each position requires a very unique set of skills and stamina, but each serve the sea turtles in a meaningful way. Many of our rescue staff also support one (or more) of the above missions.
-            <br/>NOTE: Rescue Personnel have a defined enrollment period, as dictated by the Florida Wildlife
-            Conservation Commission (FWCC). If you are interested in being a member of our rescue staff, complete your application ASAP. Training sessions are very limited.
-          </p>
-          <a href={volunteerFormLink} className='volunteer-form'>
-            Volunteer Form
-          </a>
         </div>
+        <p>
+          Each position requires a very unique set of skills and stamina, but each serve the sea turtles in a meaningful way. Many of our rescue staff also support one (or more) of the above missions.
+          <br />
+          NOTE: Rescue Personnel have a defined enrollment period, as dictated by the Florida Wildlife Conservation Commission (FWCC). If you are interested in being a member of our rescue staff, complete your application ASAP. Training sessions are very limited.
+        </p>
+
+        <Link href={volunteerFormLink}>
+          <button className='volunteer-form-button' role='button'>
+            Apply Now!
+          </button>
+        </Link>
       </div>
     </RouteLayout>
   )
