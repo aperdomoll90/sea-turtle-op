@@ -18,22 +18,23 @@
   height: auto;
   position: absolute;
   z-index: 0;
-  top: -10%;
-  right: -80%;
+  top: -30%;
+  right: 40%;
 }
 
 .rotated {
   z-index: 0;
-  top: 40%;
-  right: -90%;
+  top: 0%;
+  right: -25%;
   transform: rotate(35deg);
 }
 
 .bottom {
   z-index: 0;
-  width: 60%;
-  top: 80%;
-  right: -10%;
+  width: 90%;
+  top: 90%;
+  right: 10%;
+  transform: rotate(-25deg);
 }
 /* Ipads and above */
 @media (width > 450px) {
@@ -50,6 +51,22 @@
 @media (width >= 900px) {
   .our-beginnings-section-content {
     width: 45%;
+  }
+  .our-beginnings-image {
+    top: -10%;
+    right: -80%;
+  }
+
+  .rotated {
+    top: 70%;
+    right: -90%;
+  }
+
+  .bottom {
+    width: 60%;
+    top: 80%;
+    right: -30%;
+    transform: rotate(0deg);
   }
 }
 

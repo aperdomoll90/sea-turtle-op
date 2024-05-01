@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background: var(--mainBackgroundColor);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #home-canvas-container {
@@ -33,29 +33,17 @@
 
 .home-content-wrapper {
   position: relative;
-  padding-top: 70vh;
+  padding-top: 100vh;
 }
 
 #home-canvas-logo-ring {
   height: 75vh;
-  aspect-ratio: 1/1;
+  max-width: unset !important;
   position: absolute;
   top: calc(50vh - 75vh / 2);
   opacity: 0.5;
   animation: logo-ring-animation linear forwards;
   animation-timeline: scroll(root);
-}
-
-@keyframes logo-ring-animation {
-
-  7%,
-  100%  {
-    opacity: 0;
-  }
-  10%,
-  100% {
-    transform: scale(3) rotate(180deg);
-  }
 }
 
 .home-section {
@@ -94,6 +82,9 @@ h2 {
 
 /* Medium devices */
 @media (width >= 900px) {
+  .home-content-wrapper {
+    padding-top: 70vh;
+  }
   h2 {
     font-size: 2rem;
   }
@@ -104,6 +95,7 @@ h2 {
 
 /* Large devices */
 @media (width > 1500px) {
+
   h2 {
     font-size: 4rem;
   }

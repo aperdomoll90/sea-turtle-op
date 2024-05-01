@@ -38,9 +38,9 @@ const OurBeginning = () => {
         <button className='action-button our-beginnings-button' onClick={() => setVisible(true)}>
           Read More
         </button>
-        <img src={release} alt='photography of release of a baby turtle' className='our-beginnings-image' />
-        <img src={volunteers} alt='Volunteer team photography' className='our-beginnings-image rotated' />
-        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='our-beginnings-image bottom' />
+        <img src={release} alt='photography of release of a baby turtle' className='fadeIn our-beginnings-image' />
+        <img src={volunteers} alt='Volunteer team photography' className='fadeIn our-beginnings-image rotated' />
+        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='fadeIn our-beginnings-image bottom' />
       </div>
       {visible && <ContentModel title='How STOP Started' content={modelContent} setVisible={setVisible} />}
     </div>
