@@ -1,23 +1,32 @@
 .routeLayout-wrapper {
-  height: 100vh;
+  max-height: 220vh;
   width: 100vw;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .routeLayout-header {
-  width: 30vw;
-  height: 50%;
+  width: 100%;
+  height: 50vh;
   padding: 0px 3rem 0px 3rem;
   z-index: 6;
   position: relative;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 
 .routeLayout-content {
-  width: 70vw;
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .routeLayout-route {
@@ -37,5 +46,40 @@
   font-weight: 200;
   letter-spacing: 1px;
   position: absolute;
-  top: 60%;
+  top: 65%;
+  max-width: 75%;
 }
+
+/* Ipads and above */
+/* @media (width > 450px) {
+
+} */
+
+/* Medium devices */
+@media (width >= 900px) {
+  .routeLayout-wrapper {
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .routeLayout-header {
+    width: 30vw;
+    height: 40%;
+    margin-top: 25vh;
+  }
+  .routeLayout-comment {
+    max-width: 90%;
+  }
+  .routeLayout-content {
+    position: relative;
+    width: 70vw;
+    height: 100%;
+    margin-top: 0%;
+  }
+}
+
+/* Large devices */
+/* @media (width > 1500px) {
+
+} */

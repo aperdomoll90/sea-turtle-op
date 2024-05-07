@@ -4,65 +4,114 @@
   align-items: center;
   position: fixed;
   z-index: 99999;
-  inset: 2rem 0;
+  inset: 1rem 0;
   justify-content: space-between;
 }
 
 .primary-logo {
-  height: 4rem;
+  height: 3rem;
   width: auto;
-  margin: 3rem;
+  margin: 2rem;
+  transform-origin: top;
+  animation: logo-animation linear forwards;
+  animation-timeline: scroll();
+}
+
+@keyframes logo-animation {
+  10%,
+  100% {
+    transform: scale(0.6) translate(-3rem, -2rem);
+  }
 }
 
 /* navbar */
 
 .primary-navigation {
-  --gap: 1em;
-  list-style: none;
-  margin: 0;
   position: fixed;
   z-index: 99999;
-  inset: 0 0 0 70%;
-  flex-direction: column !important;
-  padding: min(30vh, 10rem) 4em;
+  flex-wrap: wrap;
+  overflow: scroll;
+  inset: 0 0 0 0%;
+  margin: 0;
+  padding: 5.5rem 2rem 2rem 2rem;
   transform: translateX(100%);
-  transition: transform 350ms ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 @supports (backdrop-filter: blur(1rem)) {
   .primary-navigation {
     backdrop-filter: blur(1rem);
   }
 }
+
 .primary-navigation[data-visible='true'] {
   transform: translateX(0%);
 }
 
-.NavBar-link{
+.navbar-dividers {
+  width: 100%;
+  height: 2rem;
+  font-size: 0.9rem;
+  position: relative;
+}
+.navbar-dividers::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: var(--lightBlue);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.NavBar-active {
+  width: 100%;
+  height: 3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  transition: display 0.5s ease-in-out;
+}
+
+.NavBar-active:hover {
+  background-color: #70ccca72;
+  color: black;
+}
+
+.NavBar-link {
   text-decoration: none;
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 300;
+  color: var(--lightBlue);
+  font-size: 3vw;
+  font-weight: 600;
   cursor: pointer;
-  transition: display 2s ease-in-out;
+  text-align: flex-start;
 }
 
-.NavBar-active a:hover {
-  color: var(--white);
-  background-color: var(--charcoal)
-}
+/* Ipads and above */
+/* @media (width > 450px) {
 
-.NavBar-link > [aria-hidden='true']{
-  font-weight: 700;
-  margin-inline-end: 0.5em;
-  transition: display 2s ease-in-out;
-}
+} */
 
-@media (max-width: 35em) {
+/* Medium devices */
+@media (width >= 900px) {
   .primary-logo {
-    height: 3rem;
-    margin: 2rem;
+    height: 9rem;
+    width: auto;
+    margin: 4rem 0rem 0rem 2rem;
   }
   .primary-header {
-    inset: 1rem 0;
+    inset: 2rem 0;
+  }
+  .primary-navigation {
+    inset: 0 0 0 70%;
+    padding: 5.5rem 2rem 2rem 2rem;
+  }
+  .NavBar-link {
+    font-size: 0.9vw;
   }
 }
+
+/* Large devices */
+/* @media (width > 1500px) {
+
+} */

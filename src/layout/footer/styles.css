@@ -1,19 +1,27 @@
 footer {
   width: 100vw;
-  height: 4rem;
+  height: 8rem;
   background: var(--mainBackgroundColor);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   z-index: 100;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footer-text {
+  width: 70%;
+  height: 100%;
   color: var(--offWhite);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
 }
 
 .footer-text p {
@@ -25,6 +33,53 @@ footer {
   color: var(--white);
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+.footer-links {
+  height: 90%;
+  width: 10%;
+  /* position: absolute; */
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-icon {
+  height: 1.5rem;
+  aspect-ratio: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-icon:hover {
+  transform: scale(1.3);
+}
+
+.instagram-link {
+  background: url(/assets/insta.png) no-repeat center center;
+  background-size: contain;
+}
+
+.twitter-link {
+  background: url(/assets/twiter.png) no-repeat center center;
+  background-size: contain;
+}
+
+.facebook-link {
+  background: url(/assets/facebook.png) no-repeat center center;
+  background-size: contain;
+}
+
+.footer-button {
+  transition: 0.5s;
+  margin-left: 0.3rem;
+}
+
+.footer-button:hover {
+  color: var(--white);
+  font-size: 0.9rem;
 }
 
 .copy-right-text {
@@ -63,48 +118,21 @@ footer {
   margin: 0.6rem;
 }
 
-.footer-links {
-  height: 100%;
-  width: 10%;
-  position: absolute;
-  left: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
+@media (width >= 900px) {
+  footer {
+    height: 4rem;
+    flex-direction: row;
+  }
+  .footer-text {
+    width: auto;
+    flex-direction: row;
+  }
 
-.footer-icon {
-  height: 1.5rem;
-  aspect-ratio: 1;
-  transition: 0.3s ease-in-out;
-}
-
-.footer-icon:hover {
-  transform: scale(1.3);
-}
-
-.instagram-link {
-  background: url(/assets/insta.png) no-repeat center center;
-  background-size: contain;
-}
-
-.twitter-link {
-  background: url(/assets/twiter.png) no-repeat center center;
-  background-size: contain;
-}
-
-.facebook-link {
-  background: url(/assets/facebook.png) no-repeat center center;
-  background-size: contain;
-}
-
-.footer-button {
-  transition: 0.5s;
-  margin-left: 0.3rem;
-}
-
-.footer-button:hover {
-  color: var(--white);
-  font-size: 0.9rem;
+  .footer-links {
+    position: absolute;
+    width: 10%;
+    left: 2rem;
+    top: 0;
+    flex-direction: row;
+  }
 }

@@ -15,8 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={abel.className}>
         <NavBar />
-        <div className='layout-page-container'>{children}</div>
-        <Footer />
+        {children}
       </body>
     </html>
   )

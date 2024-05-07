@@ -1,6 +1,9 @@
 import React from 'react'
 import { ContentModel } from '../ContentModel/ContentModel'
 import './styles.css'
+const volunteers = '../../assets/volunteers.jpg'
+const release = '../../assets/release.jpg'
+const whiteclouds = '../../assets/Whiteclouds.jpg'
 
 const OurBeginning = () => {
   const [visible, setVisible] = React.useState(false)
@@ -17,7 +20,7 @@ const OurBeginning = () => {
       not sleep. It took several more summers of walking the beach all night with our red lights, buckets and FWC permit to get to where we are now. It took hundreds and thousands of more baby sea turtle hatchlings dying in streets, parking lots and dune vegetation before S.T.O.P. began to change
       things. Before we found an amazing network of support and die-hard volunteers. Before we got the attention of FWC, FWS, the news media, national conservation groups, and the world. Before we got our first four infrared night vision cameras and caught in real time the nightly disorientation of
       sea turtle hatchlings. Before using smartphones to compile volumes of never before collected, real-time data. <br />
-      But it took much longer than several summers. It took decades before someone said, on the most important loggerhead nesting beach in the world, "The endless, nightly slaughter of sea turtle hatchlings on Florida beaches has got to STOP!"
+      But it took much longer than several summers. It took decades before someone said, on the most important loggerhead nesting beach in the world, The endless, nightly slaughter of sea turtle hatchlings on Florida beaches has got to STOP!
     </p>
   )
   return (
@@ -35,8 +38,11 @@ const OurBeginning = () => {
         <button className='action-button our-beginnings-button' onClick={() => setVisible(true)}>
           Read More
         </button>
+        <img src={release} alt='photography of release of a baby turtle' className='fadeIn our-beginnings-image' />
+        <img src={volunteers} alt='Volunteer team photography' className='fadeIn our-beginnings-image rotated' />
+        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='fadeIn our-beginnings-image bottom' />
       </div>
-      {visible && <ContentModel title='How STOP Started' content={modelContent} setVisible={setVisible} />}
+      <ContentModel title='How STOP Started' content={modelContent} setVisible={setVisible} visible={visible} />
     </div>
   )
 }

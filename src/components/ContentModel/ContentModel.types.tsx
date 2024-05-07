@@ -1,6 +1,6 @@
 export interface ModelProps {
-    title?: string
-    content: any
-    setVisible: any
-  }
-  
+  title?: string
+  content: any
+  setVisible: any
+  visible: boolean
+}

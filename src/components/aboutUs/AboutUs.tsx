@@ -26,7 +26,7 @@ const AboutUs = () => {
         <p className='about-us-section-comment'>
           We are all volunteers. Regular people from all walks of life who have chosen to make a difference. <br />
           <br />
-          For five to eight months out of the year, we re-arrange our lives to save disoriented sea turtle hatchlings. "Sea Turtle People" have to be a little crazy to get through the long nights, but the dedication of our volunteer staff is second to none.
+          For five to eight months out of the year, we re-arrange our lives to save disoriented sea turtle hatchlings. Sea Turtle People have to be a little crazy to get through the long nights, but the dedication of our volunteer staff is second to none.
           <br />
           <br />
           Being a STOP volunteer is the toughest job you will ever love.
@@ -44,7 +44,7 @@ const AboutUs = () => {
           We aim to provide a solution to a complex problem, to create awareness through education, to balance the scales and give the hatchlings a chance to begin their life.
         </p>
       </div>
-      {visible && <ContentModel title='What Is STOP?' content={modelContent} setVisible={setVisible} />}
+     <ContentModel title='What Is STOP?' content={modelContent} setVisible={setVisible} visible={visible} />
     </div>
   )
 }

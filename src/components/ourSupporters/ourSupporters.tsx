@@ -49,13 +49,13 @@ export default function OurSupporters() {
     <div className='home-section our-supporters-section flex justify-end items-center'>
       <div className='our-supporters-section-content flex flex-col justify-around items-center'>
         <SupporterMarquee label='Our Supporters' direction='left'>
-          {companiesArray && companiesArray.map(card => <img className='supporter-company-logo' alt='supporter company logo' src={card} />)}
+          {companiesArray && companiesArray.map((card, index) => <img key={index} className='supporter-company-logo' alt={`supporter company logo ${index}`} src={card} />)}
         </SupporterMarquee>
         <SupporterMarquee label='Thank You Donors!' direction='right'>
           <div className='donor-card-group'>
             {donorsArray &&
-              donorsArray.map(donor => (
-                <div className='donor-card flex flex-col justify-center items-center'>
+              donorsArray.map((donor, index) => (
+                <div key={index} className='donor-card flex flex-col justify-center items-center'>
                   <h5>{donor.name}</h5> <div className='donor-card-amount'>{donor.donationAmount}</div> <div className='donor-card-date'>{donor.date}</div>
                 </div>
               ))}

@@ -3,15 +3,26 @@
   width: 100vw;
   padding: 4rem 2rem 0 2rem;
   position: fixed;
+  z-index: -9999;
+  display: flex;
   inset: 0;
-  z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background: var(--mainBackgroundColor);
   overflow: scroll;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-10%);
+  pointer-events: none;
 }
 
+.model-container[data-visible='true'] {
+  opacity: 1;
+  z-index: 9999;
+  transform: translateX(0);
+  pointer-events: all;
+}
 
 .model-content-container {
   width: 100%;
@@ -46,15 +57,14 @@
 /* Medium devices */
 @media (width >= 900px) {
   .model-container {
-    padding: 6rem;
+    padding: 4rem;
   }
   .model-content-container {
     width: 80%;
   }
 }
 
-/* Large devices */
-@media (width > 1500px) {
+Large devices @media (width > 1500px) {
   .model-content-container p {
     font-size: 1.3rem;
   }

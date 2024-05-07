@@ -1,0 +1,90 @@
+#volunteer-wrapper {
+  height: 70%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+.accordion {
+  width: 100%;
+  height: 35rem;
+  max-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+.accordion-item {
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .8rem;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.75s ease-in-out;
+}
+.accordion-content ul {
+  list-style-type: circle;
+  margin: 1.2rem;
+}
+
+.accordion-content ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.accordion-content[data-open='true'] {
+  max-height: 20rem; /* Adjust according to your content size */
+}
+
+.volunteer-form-button {
+  width: 10rem;
+  height: 3rem;
+  background: var(--green);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.accordion-button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion-button:hover {
+  background-color: #d2c9c9;
+}
+
+.plus-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.accordion-button[data-open='true'] {
+  transform: rotate(315deg) scale(1.3);
+}
