@@ -3,5 +3,4 @@ export interface routeLayoutPropsTypes {
   title: string
   comment: string
   children: any
-  isContact?: boolean
 }

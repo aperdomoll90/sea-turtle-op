@@ -97,7 +97,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className='center'>
+    <footer >
       <div className='footer-links'>
         <a
           className='footer-icon instagram-link'
@@ -118,7 +118,7 @@ export const Footer = () => {
           rel='noopener noreferrer'
         />
       </div>
-      <div className='footer-text center'>
+      <div className='footer-text '>
         <p>Sea Turtle Oversight Protection, Inc 2015 - Ft. Lauderdale Florida USA</p>
         <button className='footer-button' onClick={() => getModelInfo('copyRight')}>
           | Copyright and Legal Notice
@@ -128,7 +128,7 @@ export const Footer = () => {
         </button>
       </div>
 
-      {visible && <ContentModel title={modelContent.title} content={modelContent.content} setVisible={setVisible} />}
+      <ContentModel title={modelContent.title} content={modelContent.content} setVisible={setVisible} visible={visible} />
     </footer>
   )
 }

@@ -1,6 +1,7 @@
 .name-hatchling-alt-card {
-  width: 18rem;
-  height: 25rem;
+  min-width: 18rem;
+  max-width: 18rem;
+  min-height: 25rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,13 +33,13 @@
 }
 
 .name-hatchling-alt-card h3 {
-  margin-top: 0.2rem;
+  position: absolute;
+  top: 1rem;
   align-self: start;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 1.5rem;
   font-weight: 900;
-  /* color: var(--green); */
 }
 
 .circular-button {
@@ -95,20 +96,32 @@
   ul {
     list-style: inside !important;
     font-weight: 800;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
 .name-hatchling-alt-card ul li {
   margin-bottom: 0.8rem;
 }
+.name-hatchling-alt-button-position {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  transition-delay: .4s;
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.name-hatchling-alt-button-position[data-visible='true'] {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .3s;
+}
 
 .name-hatchling-alt-button {
   width: 5rem;
   height: 2.5rem;
-  position: absolute;
-  bottom: .5rem;
-  left: .5rem;
   background: white;
   text-transform: uppercase;
   border-radius: 5px;
@@ -126,4 +139,11 @@
 
 .name-hatchling-alt-button:active {
   background: var(--red);
+}
+
+@media (width >= 900px) {
+  .name-hatchling-alt-card h3 {
+    top: 1.5rem;
+  }
+
 }

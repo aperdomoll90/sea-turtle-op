@@ -36,7 +36,8 @@ const Donations = () => {
   return (
     <div className='donations-wrapper'>
       <RouteLayout route='donations' title='Fueled By Donations, Love And Coffee' comment='We Accept All 3 To Helps Keep Us Going, Especially Donations! You Can Set Up One Time Or Recurring Donations From Here.'>
-        <form action='submit' method='post' className='donations-form' onSubmit={handleFormSubmit}>
+        <h1>Donations</h1>
+        {/* <form action='submit' method='post' className='donations-form' onSubmit={handleFormSubmit}>
           <div className='donations-form-row personal-info'>
             <div className='z-0'>
               <input
@@ -215,7 +216,7 @@ const Donations = () => {
                   Card expiration date:
                 </label>
                 <input
-                  datepicker
+                  datepicker={true}
                   datepicker-format='mm/yy'
                   id='card-expiration-input'
                   type='text'
@@ -248,7 +249,7 @@ const Donations = () => {
           <button className='basic-button donations-form-button   font-bold py-2 px-4 rounded-full' type='submit'>
             Send
           </button>
-        </form>
+        </form> */}
       </RouteLayout>
     </div>
   )

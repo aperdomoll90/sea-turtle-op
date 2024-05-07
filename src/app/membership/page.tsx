@@ -24,11 +24,6 @@ const oceanHabitat = 'https://square.link/u/XVwe4KO0'
 const resistExtinction = 'https://square.link/u/wpPhIZP5'
 
 const Membership = () => {
-  const [details, setDetails] = useState()
-
-  useEffect(() => {
-    console.log('details', details)
-  }, [details])
 
   const loggerheadDetails = (
     <ul>
@@ -81,15 +76,14 @@ const Membership = () => {
   const resistExtinctionContent = (
     <ul>
       <li>Lifetime Membership</li>
-      <li>4 "Resist Extinction" organic cotton T shirts</li>
+      <li>4 Resist Extinction organic cotton T shirts</li>
       <li>15 Loggerhead Sea Turtle Hatchling Birth Certificates</li>
     </ul>
   )
   return (
     <div id='membership-wrapper'>
       <RouteLayout route='membership' title='Become A Supporting Member Of S.T.O.P.' comment='Every membership is a voice for the sea turtles and helps keep feet on the sand with buckets in hand!'>
-        <div id='membership-wrapper'>
-          <div className='membership-container'>
+        <div className='membership-wrapper'>
             <Card contentList={loggerheadDetails} title='Threatened Loggerhead Membership' src={loggerhead} price={25} link={membershipLeatherback} />
             <Card contentList={greenDetails} title='Endangered Green Membership' src={green} price={50} link={membershipGreen} />
             <Card contentList={leatherbackDetails} title='Critically Endangered Leatherback Membership' src={leatherback} price={75} link={membershipLoggerhead} />
@@ -98,7 +92,6 @@ const Membership = () => {
             <Card contentList={leatherbackNest} title='Sponsor Leatherback nest' src={leatherbackNestImage} price={200} link={membershipLoggerheadNest} />
             <Card contentList={oceanHabitatContent} title='Ocean Habitat Sponsor' src={oceanHabitatImage} price={500} link={oceanHabitat} />
             <Card contentList={resistExtinctionContent} title='Resist Extinction Earth Endowment' src={resistExtinctionImage} price={1000} link={resistExtinction} />
-          </div>
         </div>
       </RouteLayout>
     </div>

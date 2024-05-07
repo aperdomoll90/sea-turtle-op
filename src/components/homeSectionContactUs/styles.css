@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 5rem;
 }
 
 #home-contact-logo-ring {
@@ -92,6 +93,51 @@
   align-items: center;
   justify-content: space-around;
 }
+/* ******** LEFT SIDE  ************ */
+
+.home-contact-section-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-contact-section-header {
+  width: 100%;
+  height: 50%;
+  padding: 0px 3rem 0px 3rem;
+  z-index: 6;
+  position: relative;
+}
+
+.home-contact-section-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.home-contact-section-route {
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.home-contact-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.home-contact-section-comment {
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 60%;
+}
 
 /* Ipads and above */
 /* @media (width > 450px) {
@@ -109,6 +155,19 @@
     height: 130vh;
     bottom: -50%;
     right: -10%;
+  }
+
+  .home-contact-section-wrapper {
+    height: 100vh;
+    flex-direction: row;
+  }
+  .home-contact-section-header {
+    width: 30vw;
+  }
+
+  .home-contact-section-content {
+    position: relative;
+    width: 70vw;
   }
 }
 

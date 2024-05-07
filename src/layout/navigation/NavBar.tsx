@@ -1,12 +1,18 @@
 'use client'
 import './styles.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
 import { ToggleButton } from '../navigation/ToggleButton'
+import { preventScrolling } from '@/utils/preventScrolling'
 const logo = '/assets/logo.svg'
 
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    console.log('visible', visible)
+    preventScrolling(visible)
+   }, [visible])
 
   const shop = 'https://SeaTurtleOP.square.site/s/order'
   const donation = 'https://square.link/u/dlO6GG5f'

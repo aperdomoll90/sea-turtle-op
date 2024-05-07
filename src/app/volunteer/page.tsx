@@ -75,10 +75,10 @@ const PlusSVG = () => (
   </svg>
 )
 const Volunteer = () => {
-  const [activeIndex, setActiveIndex] = useState(null)
+  const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined)
 
-  const handleAccordionClick = index => {
-    setActiveIndex(prevIndex => (prevIndex === index ? null : index))
+  const handleAccordionClick = (index: number) => {
+    setActiveIndex(prevIndex => (prevIndex === index ? undefined : index))
   }
   const getOpenValue = (index: number) => {
     return activeIndex === index ? true : false

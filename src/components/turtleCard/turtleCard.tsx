@@ -24,14 +24,14 @@ export const Card: React.FC<CardProps> = ({ src, price, title, link, contentList
       <h3>{title}</h3>
       <div className='name-hatchling-alt-card-content' data-visible={visible} aria-hidden={!visible}>
         {contentList}
-        <Link href={link}>
-          <button className='name-hatchling-alt-button' role='button'>
-            <p>
-              Give <span>${price}</span>
-            </p>
-          </button>
-        </Link>
       </div>
+      <Link href={link} className='name-hatchling-alt-button-position' data-visible={visible} aria-hidden={!visible}>
+        <button className='name-hatchling-alt-button' role='button'>
+          <p>
+            Give <span>${price}</span>
+          </p>
+        </button>
+      </Link>
       <button className='circular-button' data-visible={visible} onClick={() => setVisible(!visible)}>
         <PlusSVG />
       </button>

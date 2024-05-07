@@ -5,10 +5,11 @@ import { CameraControls } from '@react-three/drei'
 import { Canvas } from 'react-three-fiber'
 const logoRing = '/assets/ring.png'
 import { LeatherbackModel } from '@/components/LoadLeatherback'
-import AboutUs from '@/components/aboutUs/aboutUs'
+import AboutUs from '@/components/aboutUs/AboutUs'
 import OurBeginning from '@/components/ourBeginning/ourBeginning'
 import OurSupporters from '@/components/ourSupporters/ourSupporters'
 import HomeSectionContactUs from '@/components/homeSectionContactUs/homeSectionContactUs'
+import { Footer } from '@/layout/footer/Footer'
 
 const Model = () => {
   const meshRef = useRef<any>()
@@ -44,6 +45,7 @@ export default function Home() {
         <OurBeginning />
         {/* <OurSupporters /> */}
         <HomeSectionContactUs />
+        <Footer />
       </div>
     </div>
   )
