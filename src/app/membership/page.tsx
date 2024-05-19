@@ -91,7 +91,7 @@ const Membership = () => {
             <Card contentList={greenNest} title='Sponsor Green nest' src={greenNestImage} price={150} link={membershipGreenNest} />
             <Card contentList={leatherbackNest} title='Sponsor Leatherback nest' src={leatherbackNestImage} price={200} link={membershipLoggerheadNest} />
             <Card contentList={oceanHabitatContent} title='Ocean Habitat Sponsor' src={oceanHabitatImage} price={500} link={oceanHabitat} />
-            <Card contentList={resistExtinctionContent} title='Resist Extinction Earth Endowment' src={resistExtinctionImage} price={1000} link={resistExtinction} />
+            <Card contentList={resistExtinctionContent} title='Resist Extinction Lifetime Membership' src={resistExtinctionImage} price={1000} link={resistExtinction} />
         </div>
       </RouteLayout>
     </div>

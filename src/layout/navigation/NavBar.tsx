@@ -31,7 +31,8 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
       <a href='/'>{logo && <img src={logo} className='primary-logo' />}</a>
       <ToggleButton
         top={1}
-        right={4}
+        rightMobile={2}
+        rightDesktop={4}
         customClass='mobile-nav-toggle'
         ariaControls='primary-navigation'
         ariaExpanded={visible}
