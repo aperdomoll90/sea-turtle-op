@@ -1,5 +1,5 @@
 .primary-header {
-  height: 5rem;
+  height: 2rem;
   width: 100vw;
   align-items: center;
   position: fixed;
@@ -8,10 +8,12 @@
   justify-content: space-between;
 }
 
-.primary-logo {
-  height: 5rem;
-  width: auto;
-  margin: 2rem;
+.primary-logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-left: 2rem;
   transform-origin: top;
   animation: logo-animation linear forwards;
   animation-timeline: scroll();
@@ -95,10 +97,10 @@
 
 /* Medium devices */
 @media (width >= 900px) {
-  .primary-logo {
-    height: 9rem;
-    width: auto;
-    margin: 4rem 0rem 0rem 2rem;
+  .primary-logo-text {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-left: 2rem;
   }
   .primary-header {
     inset: 2rem 0;

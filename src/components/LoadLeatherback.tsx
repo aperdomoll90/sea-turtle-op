@@ -50,7 +50,7 @@ export function LeatherbackModel({ ...props }) {
     }
     if (viewportSize.width > 900) {
       console.log('viewportSize desktop')
-      setScale(120)
+      setScale(130)
     }
   }, [viewportSize])
 

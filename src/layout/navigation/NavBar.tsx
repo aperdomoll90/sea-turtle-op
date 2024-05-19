@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
 import { ToggleButton } from '../navigation/ToggleButton'
 import { preventScrolling } from '@/utils/preventScrolling'
-const logo = '/assets/logo.svg'
+
 
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
@@ -28,7 +28,7 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
 
   return (
     <section id='primary-header' className='primary-header flex-row'>
-      <a href='/'>{logo && <img src={logo} className='primary-logo' />}</a>
+      {/* <a href='/'><p className='primary-logo-text'>S.T.O.P.</p></a> */}
       <ToggleButton
         top={1}
         rightMobile={2}

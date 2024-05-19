@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--mainBackgroundColor);
   overflow: hidden;
 }
 
@@ -41,7 +40,7 @@
   max-width: unset !important;
   position: absolute;
   top: calc(50vh - 45vh / 2);
-  opacity: 0.5;
+  opacity: 0.7;
   animation: logo-ring-animation linear forwards;
   animation-timeline: scroll(root);
 }
@@ -76,7 +75,7 @@ h2 {
 /* Ipads */
 @media (width >= 450px) {
    #home-canvas-logo-ring {
-    height: 5vh;
+    height: 60vh;
     top: calc(50vh - 60vh / 2);
   }
   h2 {
@@ -89,9 +88,6 @@ h2 {
   #home-canvas-logo-ring {
     height: 75vh;
     top: calc(50vh - 75vh / 2);
-  }
-  .home-content-wrapper {
-    padding-top: 70vh;
   }
   h2 {
     font-size: 2rem;
