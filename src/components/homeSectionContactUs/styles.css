@@ -1,5 +1,5 @@
 #home-contact-section {
-  height: 100%;
+  height: 120vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -96,7 +96,7 @@
 /* ******** LEFT SIDE  ************ */
 
 .home-contact-section-wrapper {
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
   position: relative;
   display: flex;
@@ -107,7 +107,7 @@
 
 .home-contact-section-header {
   width: 100%;
-  height: 50%;
+  height: 40%;
   padding: 0px 3rem 0px 3rem;
   z-index: 6;
   position: relative;
@@ -163,6 +163,7 @@
   }
   .home-contact-section-header {
     width: 30vw;
+    height: 50%;
   }
 
   .home-contact-section-content {

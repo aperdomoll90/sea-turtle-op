@@ -5,8 +5,8 @@
   position: absolute;
   top: var(--top);
   bottom: var(--bottom);
-  left: var(--left);
-  right: var(--right);
+  left: var(--leftMobile);
+  right: var(--rightMobile);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,4 +69,12 @@
 
 .ToggleButtonActive span:nth-child(3) {
   transform: translateX(120%);
+}
+
+/* Medium devices */
+@media (width >= 900px) {
+  .ToggleButton {
+    left: var(--leftDesktop);
+    right: var(--rightDesktop);
+  }
 }

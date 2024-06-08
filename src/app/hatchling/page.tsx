@@ -17,7 +17,7 @@ const Hatchling = () => {
     <ul>
       <li>Your hatchling is given its name after its rescued and released into the ocean</li>
       <li>We prepare a digital birth certificate and email it to you.</li>
-      <li>The birth certificate shows the date of emergence, the nurse number and the name you selected.</li>
+      <li>The birth certificate shows the date of emergence, the nest number and the name you selected.</li>
     </ul>
   )
   return (

@@ -26,7 +26,7 @@ const Contact = () => {
             </ul>
           </div>
           <div className='contact-us-column'>
-            <h4 className='contact-us-secondary-title'>Other primary contact & emergency numbers:</h4>
+            <h4 className='contact-us-secondary-title'>Sea Turtle Emergency Contacts:</h4>
             <ul>
               <li>STOP 24/7 Hatchling Emergency</li>
               <li>(954) 404-0025</li>

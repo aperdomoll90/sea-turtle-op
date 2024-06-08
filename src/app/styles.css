@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--mainBackgroundColor);
   overflow: hidden;
 }
 
@@ -37,11 +36,11 @@
 }
 
 #home-canvas-logo-ring {
-  height: 75vh;
+  height: 45vh;
   max-width: unset !important;
   position: absolute;
-  top: calc(50vh - 75vh / 2);
-  opacity: 0.5;
+  top: calc(50vh - 45vh / 2);
+  opacity: 0.7;
   animation: logo-ring-animation linear forwards;
   animation-timeline: scroll(root);
 }
@@ -75,6 +74,10 @@ h2 {
 
 /* Ipads */
 @media (width >= 450px) {
+   #home-canvas-logo-ring {
+    height: 60vh;
+    top: calc(50vh - 60vh / 2);
+  }
   h2 {
     margin: 5rem 0 2rem 0;
   }
@@ -82,8 +85,9 @@ h2 {
 
 /* Medium devices */
 @media (width >= 900px) {
-  .home-content-wrapper {
-    padding-top: 70vh;
+  #home-canvas-logo-ring {
+    height: 75vh;
+    top: calc(50vh - 75vh / 2);
   }
   h2 {
     font-size: 2rem;
@@ -95,7 +99,6 @@ h2 {
 
 /* Large devices */
 @media (width > 1500px) {
-
   h2 {
     font-size: 4rem;
   }
