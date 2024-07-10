@@ -5,14 +5,13 @@ import { NavBarPropsTypes, menuItemsArrayPropsTypes } from './NavBar.types'
 import { ToggleButton } from '../navigation/ToggleButton'
 import { preventScrolling } from '@/utils/preventScrolling'
 
-
 export const NavBar: React.FC<NavBarPropsTypes> = () => {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     console.log('visible', visible)
     preventScrolling(visible)
-   }, [visible])
+  }, [visible])
 
   const shop = 'https://SeaTurtleOP.square.site/s/order'
   const donation = 'https://square.link/u/dlO6GG5f'
@@ -46,6 +45,9 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
         <div id='primary-navigation' aria-expanded={visible} data-visible={visible} className='primary-navigation uppercase ff-sans-cond flex-row'>
           {renderAccordionBullet('/', 'Home')}
           {renderAccordionBullet(shop, 'Shop')}
+          <p className='navbar-dividers'>Learn</p>
+          {renderAccordionBullet('/lights', 'Sea Turtles + Lights')}
+          {renderAccordionBullet('/learn', 'Learn About Sea Turtles')}
           <p className='navbar-dividers'>How to support Us</p>
           {renderAccordionBullet(donation, 'Donations')}
           {renderAccordionBullet('/hatchling', 'Name a hatchling')}

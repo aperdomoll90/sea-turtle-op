@@ -8,14 +8,6 @@
   justify-content: center;
 }
 
-.primary-logo {
-  height: 10rem;
-  width: auto;
-  position: absolute;
-  top: -11rem;
-  left: 0.5rem;
-  transform: rotate(-25deg);
-}
 
 .routeLayout-header {
   width: 100%;
@@ -23,8 +15,18 @@
   padding: 0px 3rem 0px 3rem;
   z-index: 6;
   position: relative;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.primary-logo {
+  height: 10rem;
+  width: auto;
+  margin-bottom: 2rem;
 }
 
 .routeLayout-content {
@@ -48,14 +50,13 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: capitalize;
+  margin-bottom: 2rem;
 }
 
 .routeLayout-comment {
   font-size: 0.9rem;
   font-weight: 200;
   letter-spacing: 1px;
-  position: absolute;
-  top: 65%;
   max-width: 75%;
 }
 
@@ -75,7 +76,7 @@
   .routeLayout-header {
     width: 30vw;
     height: 40%;
-    margin-top: 25vh;
+    margin-top: 0vh;
   }
   .routeLayout-comment {
     max-width: 90%;

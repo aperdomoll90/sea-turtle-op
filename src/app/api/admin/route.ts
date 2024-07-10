@@ -9,7 +9,6 @@ export async function GET() {
 
 export const POST = async () => {
 	const userAdded = await users.insertOne({ email: 'Jonathans199@gmail.com', password: '112314' })
-	console.log(userAdded)
 
 	return NextResponse.json('Posting here ')
 }

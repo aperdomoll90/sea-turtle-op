@@ -10,6 +10,8 @@ export const metadata = {
   description: 'Resist Extinction',
 }
 
+
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>

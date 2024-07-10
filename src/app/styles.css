@@ -74,7 +74,7 @@ h2 {
 
 /* Ipads */
 @media (width >= 450px) {
-   #home-canvas-logo-ring {
+  #home-canvas-logo-ring {
     height: 60vh;
     top: calc(50vh - 60vh / 2);
   }
