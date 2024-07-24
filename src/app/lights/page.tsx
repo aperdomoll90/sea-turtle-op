@@ -22,16 +22,16 @@ export default function Lights() {
         </p>
         <h3>Balancing Safety & Sea Turtles </h3>
         <p>
-          `Sea turtle nesting beaches are special places where careful management of artificial lighting is needed. Research and new technology are now providing us with the tools to manage coastal lighting so it's safe for both people and sea turtles. There are three main rules for sea turtle
-          friendly lighting:`
+          Sea turtle nesting beaches are special places where careful management of artificial lighting is needed. Research and new technology are now providing us with the tools to manage coastal lighting so it's safe for both people and sea turtles. There are three main rules for sea turtle
+          friendly lighting:
         </p>
         <ul>
           <li>1. Keep it low. Mount the fixtures as low to the ground as possible and use low bulb wattage. </li>
 
-          <li>2 Keep it shielded. Use full cut off fixtures that direct light down to the ground or shield fixtures so that you cannot see the bulb lamp or the glowing lens. </li>
+          <li>2. Keep it shielded. Use full cut off fixtures that direct light down to the ground or shield fixtures so that you cannot see the bulb lamp or the glowing lens. </li>
 
           <li>
-            3 Keep it long. Sea turtles are less disturbed by long wavelengths of light (570 nanometers or longer). Studies have shown that sea turtles do not perceive or they are not attracted to the long wavelengths of light, which appear to us as Red and Amber (or orange). However, white, blue,
+            3. Keep it long. Sea turtles are less disturbed by long wavelengths of light (570 nanometers or longer). Studies have shown that sea turtles do not perceive or they are not attracted to the long wavelengths of light, which appear to us as Red and Amber (or orange). However, white, blue,
             purple, green and yellow lights will attract sea turtle hatchlings.
           </li>
         </ul>

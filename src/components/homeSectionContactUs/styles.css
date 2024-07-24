@@ -1,122 +1,35 @@
-#home-contact-section {
-  height: 120vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 5rem;
-}
-
-#home-contact-logo-ring {
-  height: 110vh;
-  max-width: unset !important;
-  position: absolute;
-  bottom: -50%;
-  right: -20%;
-  opacity: 0.8;
-}
-
-.home-contact-services-container {
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  bottom: -30%;
-  left: 4rem;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.home-contact-services {
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
-  position: absolute;
-  transform: rotate(calc(360deg / 12 * var(--i))) translateX(10.2rem);
-}
-
-.home-contact-services:nth-child(1) {
-  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
-}
-
-.home-contact-services:nth-child(4) {
-  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
-}
-
-.rotation-stabilizer-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform: rotate(calc(360deg / -12 * var(--i)));
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.home-contact-services-icons {
-  position: relative;
-  width: 3rem;
-  aspect-ratio: 1/1;
-  margin-right: 0.5rem;
-}
-
-.home-contact-services-text {
-  font-size: 0.9rem;
-  color: var(--white);
-}
-
-#home-contact-section-button {
-  position: absolute;
-  top: calc(85% - 2rem);
-  left: 5%;
-  background-color: var(--mainBackgroundColor);
-  z-index: 99;
-}
-
-#home-contact-section-button:hover {
-  background-color: var(--richBlack);
-}
-#home-contact-section-button:active {
-  background-color: var(--mainBackgroundColor);
-}
-
-#home-contact-form-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-/* ******** LEFT SIDE  ************ */
-
 .home-contact-section-wrapper {
-  height: 130vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
+  padding: 0px 3rem 0px 3rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .home-contact-section-header {
   width: 100%;
-  height: 40%;
+  height: 50vh;
   padding: 0px 3rem 0px 3rem;
   z-index: 6;
   position: relative;
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.home-contact-section-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.home-contact-section-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .home-contact-section-route {
@@ -135,44 +48,148 @@
   font-size: 0.9rem;
   font-weight: 200;
   letter-spacing: 1px;
-  position: absolute;
   top: 60%;
 }
 
-/* Ipads and above */
-/* @media (width > 450px) {
-
+/* .home-contact-services-container {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  bottom: -25%;
+  left: 4rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
 } */
 
-/* Medium devices */
-@media (width >= 900px) {
-  #home-contact-section-button {
-    top: calc(50% - 2rem);
-    left: 25%;
-  }
+/* .home-contact-services {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: absolute;
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(10.2rem);
+} */
 
-  #home-contact-logo-ring {
-    height: 130vh;
-    bottom: -50%;
-    right: -10%;
-  }
+/* .home-contact-services:nth-child(1) {
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
+}
 
+.home-contact-services:nth-child(4) {
+  transform: rotate(calc(360deg / 12 * var(--i))) translateX(11rem);
+} */
+
+/* .rotation-stabilizer-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotate(calc(360deg / -12 * var(--i)));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+/* .home-contact-services-icons {
+  position: relative;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  margin-right: 0.5rem;
+} */
+
+/* .home-contact-services-text {
+  font-size: 0.9rem;
+  color: var(--white);
+} */
+
+#home-contact-section-button {
+  position: relative;
+  margin-top: 2rem;
+  background-color: var(--mainBackgroundColor);
+  z-index: 99;
+}
+
+#home-contact-section-button:hover {
+  background-color: var(--richBlack);
+}
+
+#home-contact-section-button:active {
+  background-color: var(--mainBackgroundColor);
+}
+
+#home-contact-form-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home-contact-section-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-contact-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0 0 7rem 3rem;
+}
+
+#home-contact-logo-ring {
+  width: 110vw;
+  max-height: unset !important;
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@media (min-width: 970px) {
   .home-contact-section-wrapper {
     height: 100vh;
     flex-direction: row;
   }
+
   .home-contact-section-header {
     width: 30vw;
-    height: 50%;
+    margin-top: 0vh;
+    padding: 0px 0rem 0px 3rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .home-contact-section-content {
     position: relative;
     width: 70vw;
   }
+
+  .home-contact-services-container {
+    bottom: -50%;
+  }
+  #home-contact-section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home-contact-logo-ring {
+    width: 45vw;
+    /* bottom: -50%; */
+    /* right: -10%; */
+  }
 }
-
-/* Large devices */
-/* @media (width > 1500px) {
-
-} */

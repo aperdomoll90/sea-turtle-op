@@ -141,7 +141,7 @@
   background: var(--red);
 }
 
-@media (width >= 900px) {
+@media (width >= 970px) {
   .name-hatchling-alt-card h3 {
     top: 1.5rem;
   }

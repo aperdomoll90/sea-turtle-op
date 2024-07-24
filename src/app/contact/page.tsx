@@ -33,7 +33,7 @@ const Contact = () => {
             </ul>
             <ul>
               <li>Broward County</li>
-              <li>(954) 404-0025</li>
+              <li>(954) 328-0580</li>
             </ul>
             <ul>
               <li>FWCC</li>

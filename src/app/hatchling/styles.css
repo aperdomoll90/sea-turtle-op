@@ -14,7 +14,7 @@
 
 }
 
-@media (width >= 900px) {
+@media (width >= 970px) {
   .name-hatchling-container {
     overflow: hidden;
     flex-direction: row;

@@ -1,4 +1,13 @@
+.home-section {
+  height: 100vh;
+  width: 100vw;
+}
+
 .our-beginnings-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
 }
@@ -6,73 +15,107 @@
 .our-beginnings-section-content {
   position: relative;
   height: fit-content;
-  width: 100%;
+  width: 90%;
   padding: 2rem;
-}
-.our-beginnings-button {
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.our-beginnings-image {
+.our-beginnings-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.our-beginnings-section-comment {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.our-beginnings-button {
+  margin-top: 2rem;
+}
+
+/* .our-beginnings-image {
   width: 80%;
   height: auto;
   position: absolute;
   z-index: 0;
   top: -30%;
   right: 40%;
-}
+} */
 
-.rotated {
+/* .rotated {
   z-index: 0;
   top: 0%;
   right: -25%;
   transform: rotate(35deg);
-}
+} */
 
-.bottom {
+/* .bottom {
   z-index: 0;
   width: 90%;
   top: 90%;
   right: 10%;
   transform: rotate(-25deg);
+} */
+
+/* .fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
 }
-/* Ipads and above */
-@media (width > 450px) {
-  .our-beginnings-section {
-    justify-content: flex-start;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+} */
+
+.our-beginnings-modal-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Ipads and above */
+@media (min-width: 451px) {
+  .our-beginnings-section {
+    justify-content: center;
+    align-items: center;
+  }
+
   .our-beginnings-section-content {
-    padding: 5rem;
-    margin-left: 5rem;
+    margin-left: 5%;
   }
 }
 
 /* Medium devices */
-@media (width >= 900px) {
-  .our-beginnings-section-content {
-    width: 45%;
+@media (min-width: 970px) {
+  .our-beginnings-section {
+    justify-content: center;
+    align-items: flex-start;
   }
-  .our-beginnings-image {
+  .our-beginnings-section-content {
+    width: 50%;
+  }
+  /* .our-beginnings-image {
     top: -10%;
     right: -80%;
-  }
+  } */
 
-  .rotated {
+  /* .rotated {
     top: 70%;
     right: -90%;
-  }
+  } */
 
-  .bottom {
+  /* .bottom {
     width: 60%;
     top: 80%;
     right: -30%;
     transform: rotate(0deg);
-  }
-}
-
-/* Large devices */
-@media (width > 1500px) {
-  .our-beginnings-section-content {
-    width: 30%;
-  }
+  } */
 }

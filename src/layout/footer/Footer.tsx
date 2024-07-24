@@ -24,7 +24,7 @@ const copyRight = (
     <p className='copy-right-text t-07 m-t-06 '>
       Copyright and Legal Notice <br />
       <br />
-      Unless otherwise noted, all logos, images, content, videos, links and pages contained in this site, seaturtleop.org or related social media sites are copyrighted ©2007-2015 by Sea Turtle Oversight Protection. All content and material is for educational and scientific research purposes only and
+      Unless otherwise noted, all logos, images, content, videos, links and pages contained in this site, seaturtleop.org or related social media sites are copyrighted ©2007-2024 by Sea Turtle Oversight Protection. All content and material is for educational and scientific research purposes only and
       not to be used in any manner which may be perceived as inappropriate, negative, harassing, threatening, unlawful or in violation of anyone&apos;s rights. By posting or sharing any content published by Sea Turtle Oversight Protection you agree to these terms. For questions regarding our privacy
       & security policy, copyright or website, in general, please contact us by phone 954-404-0025 or e-mail website@seaturtleop.org .
     </p>
@@ -64,7 +64,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className='footer-text '>
-        <p>Sea Turtle Oversight Protection, Inc 2015 - Ft. Lauderdale Florida USA</p>
+        <p>Sea Turtle Oversight Protection, Inc 2024 - Ft. Lauderdale Florida USA</p>
         <span>
           <button className='footer-button' onClick={() => getModelInfo('copyRight')}>
             | Copyright and Legal Notice

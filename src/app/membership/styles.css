@@ -13,7 +13,7 @@
   margin-bottom: 5rem;
 }
 
-@media (width >= 900px) {
+@media (width >= 970px) {
   .membership-wrapper {
     margin-top: 15vh;
     height: 80vh;

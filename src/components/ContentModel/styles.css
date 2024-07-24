@@ -55,7 +55,7 @@
 }
 
 /* Medium devices */
-@media (width >= 900px) {
+@media (width >= 970px) {
   .model-container {
     padding: 4rem;
   }

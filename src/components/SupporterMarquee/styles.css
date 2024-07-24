@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
 }
 
-@media (width >= 900px) {
+@media (width >= 970px) {
   .marquee-wrapper h3 {
     font-size: 2rem;
   }

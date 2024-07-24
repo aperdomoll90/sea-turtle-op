@@ -98,7 +98,7 @@
 } */
 
 /* Medium devices */
-@media (width >= 900px) {
+@media (width >= 970px) {
   .primary-logo-text {
     margin-top: 0;
     font-size: 1.4rem;

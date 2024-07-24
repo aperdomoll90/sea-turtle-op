@@ -48,12 +48,12 @@ export const NavBar: React.FC<NavBarPropsTypes> = () => {
           <p className='navbar-dividers'>Learn</p>
           {renderAccordionBullet('/lights', 'Sea Turtles + Lights')}
           {renderAccordionBullet('/learn', 'Learn About Sea Turtles')}
+          {renderAccordionBullet(turtleTrek, 'Turtle Treks')}
           <p className='navbar-dividers'>How to support Us</p>
           {renderAccordionBullet(donation, 'Donations')}
           {renderAccordionBullet('/hatchling', 'Name a hatchling')}
           {renderAccordionBullet('/volunteer', 'Volunteer')}
           {renderAccordionBullet('/membership', 'Membership')}
-          {renderAccordionBullet(turtleTrek, 'Turtle Treks')}
           <p className='navbar-dividers'>Get to Know us</p>
           {/* {renderAccordionBullet('/gallery', 'Gallery')} */}
           {renderAccordionBullet('/contact', 'Contact')}
