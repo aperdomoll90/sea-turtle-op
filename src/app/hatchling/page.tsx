@@ -1,7 +1,6 @@
 'use client'
 import RouteLayout from '@/components/routeLayout/routeLayout'
 import './styles.css'
-import { useEffect, useState } from 'react'
 import { Card } from '@/components/turtleCard/turtleCard'
 
 const green = '../../assets/greenbackground.jpg'

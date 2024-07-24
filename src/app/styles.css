@@ -32,7 +32,7 @@
 
 .home-content-wrapper {
   position: relative;
-  padding-top: 100vh;
+  padding-top: 110vh;
 }
 
 #home-canvas-logo-ring {
@@ -74,17 +74,15 @@ h2 {
 
 /* Ipads */
 @media (width >= 450px) {
-   #home-canvas-logo-ring {
+  #home-canvas-logo-ring {
     height: 60vh;
     top: calc(50vh - 60vh / 2);
   }
-  h2 {
-    margin: 5rem 0 2rem 0;
-  }
+
 }
 
 /* Medium devices */
-@media (width >= 900px) {
+@media (width >= 970px) {
   #home-canvas-logo-ring {
     height: 75vh;
     top: calc(50vh - 75vh / 2);

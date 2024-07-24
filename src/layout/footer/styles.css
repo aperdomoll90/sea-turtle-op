@@ -119,7 +119,7 @@ footer {
   margin: 0.6rem;
 }
 
-@media (width >= 900px) {
+@media (width >= 970px) {
   footer {
     height: 4rem;
     flex-direction: row;

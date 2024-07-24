@@ -24,23 +24,19 @@ const OurBeginning = () => {
     </p>
   )
   return (
-    <div className='home-section our-beginnings-section flex flex-col content-center justify-center items-center h-screen'>
-      <div className='our-beginnings-section-content flex flex-col justify-start items-start'>
+    <div className='home-section our-beginnings-section'>
+      <div className='our-beginnings-section-content'>
         <h2 className='our-beginnings-section-title'>Our Beginnings</h2>
         <p className='our-beginnings-section-comment'>
-          Sea Turtle Oversight Protection (STOP) was founded in 2007 by the WhiteCloud Family, Richard, Siouxzen and their daughter Teakahla. <br />
-          <br />
-          STOP was the first program of its kind to rescue and release sea turtle hatchlings disoriented by coastal lighting in Broward County.
-          <br />
-          <br />
-          STOP now has the highest number of FWCC Marine Turtle Permitted staff of any organization in Florida!
+          Sea Turtle Oversight Protection (STOP) was founded in 2007 by the WhiteCloud Family, Richard, Siouxzen and their daughter Teakahla. STOP was the first program of its kind to rescue and release sea turtle hatchlings disoriented by coastal lighting in Broward County. STOP now has the highest
+          number of FWCC Marine Turtle Permitted staff of any organization in Florida!
         </p>
         <button className='action-button our-beginnings-button' onClick={() => setVisible(true)}>
           Read More
         </button>
-        <img src={release} alt='photography of release of a baby turtle' className='fadeIn our-beginnings-image' />
+        {/* <img src={release} alt='photography of release of a baby turtle' className='fadeIn our-beginnings-image' />
         <img src={volunteers} alt='Volunteer team photography' className='fadeIn our-beginnings-image rotated' />
-        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='fadeIn our-beginnings-image bottom' />
+        <img src={whiteclouds} alt='whiteclouds volunteer team photography' className='fadeIn our-beginnings-image bottom' /> */}
       </div>
       <ContentModel title='How STOP Started' content={modelContent} setVisible={setVisible} visible={visible} />
     </div>

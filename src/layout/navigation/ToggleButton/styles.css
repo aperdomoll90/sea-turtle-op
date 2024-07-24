@@ -72,7 +72,7 @@
 }
 
 /* Medium devices */
-@media (width >= 900px) {
+@media (width >= 970px) {
   .ToggleButton {
     left: var(--leftDesktop);
     right: var(--rightDesktop);

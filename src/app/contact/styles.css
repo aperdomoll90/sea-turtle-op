@@ -37,7 +37,7 @@
 }
 
 /* Medium devices */
-@media (width >= 900px) {
+@media (width >= 970px) {
   .contact-us-container {
     width: 80%;
     height: 60%;

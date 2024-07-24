@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './styles.css'
 import { Canvas } from 'react-three-fiber'
 const logoRing = '/assets/ringtext.png'
@@ -23,6 +23,7 @@ const Model = () => {
 
 export default function Home() {
   const scrollArea = React.useRef<any>()
+
   return (
     <div id='home-wrapper'>
       <img id='home-canvas-logo-ring' src={logoRing} />

@@ -1,10 +1,21 @@
+.home-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
 .about-us-section {
+  position: relative;
   height: 100vh;
   width: 100vw;
   z-index: 100;
 }
 
-.about-us-section::before {
+/* .about-us-section::before {
   content: 'SCROLL';
   position: absolute;
   top: -5rem;
@@ -12,44 +23,55 @@
   font-weight: 600;
   font-size: 1.2rem;
   letter-spacing: 2px;
+  opacity: 1;
   animation: scroll-indicator-animation linear forwards;
-  animation-timeline: scroll(root);
-}
-@keyframes scroll-indicator-animation {
+} */
+
+/* @keyframes scroll-indicator-animation {
   5%,
   100% {
     transform: translateY(-100%);
     opacity: 0;
   }
-}
+} */
+
 .about-us-section-content {
   position: relative;
   height: fit-content;
-  width: 100%;
-  padding: 2rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.about-us-button {
-  margin-top: 5rem;
+.about-us-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.our-beginnings-modal-text {
-  font-size: 0.2rem;
+.about-us-section-comment {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 /* Ipads and above */
-@media (width > 450px) {
+/* @media (min-width: 451px) {
+
+} */
+
+@media (min-width: 970px) {
   .home-section {
     flex-direction: row;
   }
   .about-us-section-content {
-    height: 100%;
-    width: 50%;
-    padding: 5rem;
+    width: 40%;
   }
-}
-
-@media (width >= 900px) {
+  .about-us-section-content:nth-child(2) {
+    align-self: flex-end;
+  }
   .about-us-section::before {
     top: -3rem;
     left: 48%;
